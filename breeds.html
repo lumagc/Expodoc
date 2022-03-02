@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breeds</title>
+    <link rel="stylesheet" href="css/breeds.css">
+</head>
+<body>
+    <header class="cabecera">
+        <figure class="cabecera__logo">
+            <img class="logo__img" src="img/logoOpcional.png" alt="logo">
+        </figure>
+        <nav class="cabecera__barra-navegacion">
+            <ul id="navs" class="barra-navegacion__apartados">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="votes.html">Votes</a></li>
+                <li><a href="breeds.html">Breeds</a></li>
+                <li><a href="imageSearch.html">Image/Search</a></li>
+                <li><a href="home.html#contactUs">Contact us</a></li>
+            </ul>
+            <ul class="barra-navegacion__apartados">
+                <li>
+                    <a href="user.html">Login</a><img class="apartados__iconos" src="img/iconos/login.png" alt="icono-login">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="section-breeds">
+            <section class="breeds-filter">
+                <div class="breeds-filter__text" onclick="ver()">
+                    <p id="seccion">Breed <span>▼</span></p>
+                    <div id="subseccion" onmouseover="verdiv()" onmouseout="ocultardiv()">
+                    </div>
+                </div> 
+            </section>
+
+            <section class="breed-image-buttons">
+
+                <section class="breed-imagen-container">
+                    <img class="breed-img" src="img/imagenes/perro2.jpg" alt="raza">
+                    <button class="breed-img-prev">&#10094;</button>
+                    <button class="breed-img-next">&#10095;</button>
+                </section>
+
+                <section class="breed-buttons">
+
+                    <p class="breed-name">Beagle</p>
+
+                    <div class="breed-button__favorite-like-dislike"><img class="icono" src="img/iconos/heart.png" alt="favorite">Add to favorites</div>
+                    
+                    <div class="breed-button__favorite-like-dislike"><img class="icono" src="img/iconos/like.png" alt="like">Like 34</div>
+                    
+                    <div class="breed-button__favorite-like-dislike"><img class="icono" src="img/iconos/dislike.png" alt="dislike"> Dislike 10</div>
+                    
+                </section>
+
+            </section>
+
+            <section class="breed-details">
+                <p>Amiable, even tempered, excitable, determined, gentle, intelligent.</p>
+                <p>9 - 16 kgs.</p>
+                <p>33 - 38 cm at the withers.</p>
+                <p>13 - 16 years average life span.</p>
+            </section>
+        </section>
+
+        <section class="section-previous-views">
+            <h1 class="previous-views-title">Previous views</h1>
+            <section class="previous-views-container-divs">
+                <div class="previous-views-container-imgs">
+                    <img class="img-previous" src="img/imagenes/perro5.jpg" alt="">
+                    <p class="name-dog-previous">Akita</p>
+                </div>
+                <div class="previous-views-container-imgs">
+                    <img class="img-previous" src="img/imagenes/perro4.jpg" alt="">
+                    <p class="name-dog-previous">Teckel</p>
+                </div>
+                <div class="previous-views-container-imgs">
+                    <img class="img-previous" src="img/imagenes/perro6.jpg" alt="">
+                    <p class="name-dog-previous">Mastiff</p>
+                </div>
+                <div class="previous-views-container-imgs">
+                    <img class="img-previous" src="img/imagenes/perro1.jpg" alt="">
+                    <p class="name-dog-previous">Alsatian</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <section class="pie-pagina__contenedor">
+            <figure class="pie-pagina__caja-logo-pie">
+                <img class="caja-logo-pie__img" src="img/logoOpcional.png" alt="logo">
+                <figcaption>Copyright |Create by:</figcaption>
+                <figcaption>Lucia Mariane Gutiérrez Castro</figcaption>
+            </figure>
+            <div class="pie-pagina__enlaces">
+                <a href="">Legal warming</a>
+                <a href="">Privacy policity<a>
+                <a href="">Cookies</a>
+                <a href="">Help us by donating</a>
+                <a href="">About us</a>
+            </div>
+            <div class="pie-pagina__contact-me">
+                <span>Contact me</span>
+                <picture>
+                    <img src="img/iconos/facebook.png" alt="facebook">
+                    <img src="img/iconos/instagram.png" alt="instagram">
+                    <img src="img/iconos/whatsapp.png" alt="whatsapp">
+                </picture>
+            </div>
+        </section>
+    </footer>
+    <script src="js/breeds.js"></script>
+</body>
+</html>

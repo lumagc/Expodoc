@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votes</title>
+    <link rel="stylesheet" href="css/votes.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img class="logo-img" src="img/logoOpcional.png" alt="logo">
+            </a>
+            <button class="nav-toggle">
+                <img src="img/iconos/menu.png" alt="">
+            </button>
+            <ul id="navs" class="nav-menu">
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="votes.html">Votes</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="breeds.html">Breeds</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="imageSearch.html">Image/Search</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="#contactUs">Contact us</a>
+                </li>
+                <!--<li><a href="" class="icoon" onclick="myFunction()"> <img src="img/iconos/menu.png" alt=""> </a></li>-->
+            </ul>
+            <ul class="nav-menu-login">
+                <li class="nav-menu-item">
+                    <a href="user.html">Login</a>
+                    <a href=""><img class="apartados__iconos" src="img/iconos/login.png" alt="icono-login"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="main-home__title">Voting</h1>
+        <section class="section-voting">
+            <section class="voting__filters">
+                <span class="filters__text">Filtered image search <img class="icono-search" src="img/iconos/magnifier.png" alt=""></span>
+                <span class="filters__text">Search for breeds <img class="icono-search" src="img/iconos/magnifier.png" alt=""></span>
+            </section>
+            
+            <section class="voting__img">
+                <img class="icono-favorite" src="img/iconos/heart.png" alt="">
+                <img class="img-perro" src="img/imagenes/perro2.jpg" alt="">
+            </section> 
+
+            <section class="voting__buttons">
+                <button class="button__like-dislike">
+                    <img class="icono-like-dislike" src="img/iconos/like.png" alt=""> Like
+                </button>
+                <button class="button__like-dislike">
+                    <img class="icono-like-dislike" src="img/iconos/dislike.png" alt=""> Dislike
+                </button>
+            </section>
+
+            <p class="voting__link"><a href="">more details about the breed</a></p>
+                       
+        </section>
+
+        <section class="section-previous-views">
+            <h1 class="previous-views-title">Previous views</h1>
+            <section class="previous-views-container-divs">
+                <div class="previous-views-container-imgs">
+                    <img class="img-previous" src="img/imagenes/perro5.jpg" alt="">
+                    <p class="name-dog-previous">Akita</p>
+                </div>
+                <div class="previous-views-container-imgs">
+                    <img class="img-previous" src="img/imagenes/perro4.jpg" alt="">
+                    <p class="name-dog-previous">Teckel</p>
+                </div>
+                <div class="previous-views-container-imgs">
+                    <img class="img-previous" src="img/imagenes/perro6.jpg" alt="">
+                    <p class="name-dog-previous">Mastiff</p>
+                </div>
+                <div class="previous-views-container-imgs">
+                    <img class="img-previous" src="img/imagenes/perro1.jpg" alt="">
+                    <p class="name-dog-previous">Alsatian</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <section class="pie-pagina__contenedor">
+            <figure class="pie-pagina__caja-logo-pie">
+                <img class="caja-logo-pie__img" src="img/logoOpcional.png" alt="logo">
+                <figcaption>Copyright |Create by:</figcaption>
+                <figcaption>Lucia Mariane Gutiérrez Castro</figcaption>
+            </figure>
+            <div class="pie-pagina__enlaces">
+                <a href="">Legal warming</a>
+                <a href="">Privacy policity<a>
+                <a href="">Cookies</a>
+                <a href="">Help us by donating</a>
+                <a href="">About us</a>
+            </div>
+            <div class="pie-pagina__contact-me">
+                <span>Contact me</span>
+                <picture>
+                    <img src="img/iconos/facebook.png" alt="facebook">
+                    <img src="img/iconos/instagram.png" alt="instagram">
+                    <img src="img/iconos/whatsapp.png" alt="whatsapp">
+                </picture>
+            </div>
+        </section>
+    </footer>
+    <script src="js/votes.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/*Importaciones*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&family=Karla:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Gemunu+Libre:wght@200&family=Karla:wght@300&display=swap');
+/*
+font-family: 'Karla', sans-serif;
+font-family: 'Gemunu Libre', sans-serif;
+font-family: 'Bitter', serif;
+*/
+/*-----Estilos para todo el documento-----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+/*---------------HTML body------------*/
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+/*-------------------Main---------------*/
+main {
+    background: linear-gradient(rgb(65, 165, 141), rgb(143, 107, 54, 0.9));
+    background-repeat: no-repeat;
+    padding: 0 160px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+main .signIn-title{
+    color: #8F6B36;
+    font-family: 'Karla', sans-serif;
+    font-size: 60px;
+    margin-top: 50px;
+}
+main .signIn-section{
+    color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0 50px 0;
+
+}
+.signIn-section .signIn-links-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 50%;
+}
+.signIn-links-form .text{
+    margin-bottom: 8px;
+    font-family: 'Karla', sans-serif;
+    font-size: 25px;
+}
+.signIn-links-form .link{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: underline;
+    margin-bottom: 35px;
+}
+.signIn-links-form .signIn-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.signIn-form>label{
+    margin-bottom: 12px;
+    font-family: 'Karla', sans-serif;
+    font-size: 30px;
+}
+.signIn-form>input{
+    border: 0;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid #8F6B36;
+    margin-bottom: 20px;
+    color: #8F6B36;
+    padding-bottom: 5px;
+}
+.signIn-form>a{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+    color: aliceblue;
+    margin-bottom: 5px; 
+}
+.signIn-form>button{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 25px;
+    background-color: #41A58D;
+    color: aliceblue;
+    border: 0;
+    border-radius: 20%;
+    padding: 12px;
+    margin-top: 20px;
+    box-shadow: 1px 5px 5px #888888;
+    cursor: pointer;
+}
+.signIn-form>button img{
+    height: 22px;
+    padding: 0px 5px;
+}
+.signIn-form>button:hover{
+    transition: all ease 0.8s;
+    background-color: #8F6B36;
+}
+.signIn-form>p{
+    margin-top: 20px;
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+}
+.signIn-section .section-logo-info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30%;
+}
+.section-logo-info .logo{
+    width: 160px;
+    margin: 0 auto;
+}
+.section-logo-info .info{
+    font-family: 'Karla', sans-serif;
+    font-size: 25px;
+    margin-top: 15px;
+}

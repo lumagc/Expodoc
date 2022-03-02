@@ -1,0 +1,324 @@
+/*Importaciones*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&family=Karla:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Gemunu+Libre:wght@200&family=Karla:wght@300&display=swap');
+/*
+font-family: 'Karla', sans-serif;
+font-family: 'Gemunu Libre', sans-serif;
+font-family: 'Bitter', serif;
+*/
+/*-----Estilos para todo el documento-----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+/*-----Estilos Header-----*/
+.cabecera{
+    /*background: linear-gradient(#41A58D,#8F6B36, 5%);*/
+    background: linear-gradient(rgb(65, 165, 141), rgb(143, 107, 54, 0.5));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+.cabecera__logo{
+    height: 150px;
+    width: 20%;
+    margin: 10px 0 10px 20px;
+    /*border: 1px solid black;*/
+}
+.logo__img{
+    width: 90%;
+    height: inherit;
+}
+.cabecera__barra-navegacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /*border: 1px solid black;*/
+    width: 75%;
+}
+.barra-navegacion__apartados{
+    display: flex;
+    flex-wrap: wrap;
+}
+.barra-navegacion__apartados li{
+    display: inline-block;
+    border: 1px solid #888888;
+    box-shadow: 1px 5px 5px #888888;
+    background-color: #41A58D;
+    padding: 15px;
+    
+}
+.barra-navegacion__apartados li a{
+    display: inline-block;
+    color: aliceblue;
+    font-size: 20px;
+}
+.apartados__iconos{
+    display: inline-block;
+    margin: 0 auto;
+    height: 20px;
+}
+
+/*--------------------------Main------------------------*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*--------Section - Upload Image-------*/
+main .uploadImage-text{
+    color: #8F6B36;
+    font-size: 50px;
+    font-family: 'Bitter', serif;
+    margin-top: 40px;
+}
+
+main .section-uploadImage{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.section-uploadImage .uploadImage-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.uploadImage-form .container-uploadImage{
+    border: 1px solid black;
+    width: 45%;
+    height: 370px;
+    position: relative;
+}
+.container-uploadImage .uploadImage{
+    width: 320px;
+    position: absolute;
+    top: 11%;
+    left: 14%;
+    cursor: pointer;
+}
+.uploadImage-form .form-upload{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+.form-upload input{
+    font-family: 'Karla', sans-serif;
+    font-size: 15px;
+    height: 60px;
+    outline: none;
+    border: 0;
+    border-radius: 10%;
+    background-color: #41A58D;
+    padding: 0px 15px;
+}
+::placeholder{
+    color: aliceblue;
+}
+.section-uploadImage .button-uploadImage{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 30px;
+    background-color: #41A58D;
+    color: aliceblue;
+    border: 0;
+    border-radius: 10%;
+    padding: 14px;
+    margin-top: 20px;
+    box-shadow: 1px 5px 5px #888888;
+    cursor: pointer;
+}
+.section-uploadImage .button-uploadImage:hover{
+    background-color: #8F6B36;
+}
+
+/*-----------------Section - Favorites------------*/
+main .section-favorites{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 70px;
+}
+.section-favorites .favorite-text{
+    color: #8F6B36;
+    font-size: 40px;
+    font-family: 'Bitter', serif;
+    margin-bottom: 25px;
+}
+.favorite-text>img{
+    height: 35px;
+}
+.section-favorites .container-img-favorites{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-img-favorites .favorite-img-div{
+    border: 1px solid;
+    border-radius: 10%;
+    width: 23%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.favorite-img-div .icono-break-heart{
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    height: 35px;
+}
+
+.favorite-img-div .favorite-img{
+    width: 100%;
+}
+.favorite-img-div .favorite-img:hover{
+    transition: all ease 0.8s;
+    opacity: 0.3;
+}
+.favorite-img-div .name-dog-favorite{
+    position: absolute;
+    top: 88%;
+    left: 5%;
+    color: #8F6B36;
+    font-size: 15px;
+    font-family: 'Bitter', serif;
+}
+
+/*-----------------Section - Upload Images------------*/
+main .section-myUploadImages{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.section-myUploadImages .myUploadImages-text{
+    color: #8F6B36;
+    font-size: 40px;
+    font-family: 'Bitter', serif;
+    margin-bottom: 25px;
+}
+.myUploadImages-text>img{
+    height: 30px;
+}
+.section-myUploadImages .container-img-myUploadImages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container-img-myUploadImages .myUploadImages-container{
+    border: 1px solid;
+    border-radius: 10%;
+    width: 23%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+.myUploadImages-container .myUploadImages-img{
+    width: 100%;
+}
+.myUploadImages-container .myUploadImages-img:hover{
+    transition: all ease 0.8s;
+    opacity: 0.3;
+}
+.myUploadImages-container .name-dog-upload{
+    position: absolute;
+    top: 88%;
+    left: 5%;
+    color: #8F6B36;
+    font-size: 15px;
+    font-family: 'Bitter', serif;
+}
+
+/*-----------------Section - Previous Views------------*/
+main .section-previous-views{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.section-previous-views .previous-views-title{
+    color: #8F6B36;
+    font-size: 40px;
+    font-family: 'Bitter', serif;
+    margin-bottom: 25px;
+}
+.section-previous-views .previous-views-container-divs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.previous-views-container-divs .previous-views-container-imgs{
+    border: 1px solid;
+    border-radius: 10%;
+    width: 23%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+.previous-views-container-imgs .img-previous{
+    width: 100%;
+}
+.previous-views-container-imgs .img-previous:hover{
+    transition: all ease 0.8s;
+    opacity: 0.3;
+}
+.previous-views-container-imgs .name-dog-previous{
+    position: absolute;
+    top: 88%;
+    left: 5%;
+    color: #8F6B36;
+    font-size: 15px;
+    font-family: 'Bitter', serif;
+}
+/*-------------------Estilos Footer-----------*/
+.pie-pagina{
+    background: linear-gradient(rgb(143, 107, 54, 0.5),rgb(65, 165, 141));
+    color: aliceblue;
+    font-family: 'Gemunu Libre', sans-serif;
+    margin-top: 80px;
+}
+.pie-pagina__contenedor{
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.caja-logo-pie__img{
+    height: 100px;
+}
+
+.pie-pagina__enlaces{
+    display: flex;
+    flex-direction: column;
+    
+}
+.pie-pagina__enlaces a{
+    color: aliceblue;
+}
+.pie-pagina__contact-me{
+    display: flex;
+    flex-direction: column;
+}
