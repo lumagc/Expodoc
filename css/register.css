@@ -24,40 +24,47 @@ a:link, a:visited, a:active {
 /*---------------HTML body------------*/
 html{
     height: 100%;
+    background: linear-gradient(rgb(65, 165, 141), rgb(143, 107, 54, 0.9));
 }
 body{
-    /* height: 100%; */
-    display: flex;
-    justify-content: center;
+    height: 100%;
 }
+
 /*-------------------Main---------------*/
 main {
-    background: linear-gradient(rgb(65, 165, 141), rgb(143, 107, 54, 0.9));
-    background-repeat: no-repeat;
-    padding: 0 160px;
+    width: 68%;
+    height: inherit;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
 }
 main .register-title{
     color: #8F6B36;
     font-family: 'Karla', sans-serif;
     font-size: 60px;
-    margin-top: 50px;
+    margin-bottom: 50px;
 }
 main .register-section{
     color: aliceblue;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 30px;
-
 }
+
 .register-section .register-links-form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width: 50%;
+}
+.register-form>a{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+    color: aliceblue;
+    margin-bottom: 5px; 
 }
 .register-links-form .text{
     margin-bottom: 8px;
@@ -66,7 +73,7 @@ main .register-section{
 }
 .register-links-form .link{
     font-family: 'Gemunu Libre', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     color: aliceblue;
     text-decoration: underline;
     margin-bottom: 35px;
@@ -81,33 +88,29 @@ main .register-section{
     font-family: 'Karla', sans-serif;
     font-size: 30px;
 }
-.register-form .label-checkbox{
-    font-size: 16px;
+
+.form__group>input{
+    border: 0;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid aliceblue;
+    margin-bottom: 20px;
+    color: #8F6B36;
+    font-size: 22px;
+    padding-bottom: 5px;
+    width: 90%;
 }
-.label-checkbox>input{
+.register-form .label-checkbox{
+    font-size: 18px;
+}
+.label-checkbox input{
     margin-right: 5px;
 }
-.label-checkbox>a{
+.label-checkbox a{
     color: aliceblue;
     text-decoration: underline;
 }
 
-.register-form>input{
-    border: 0;
-    outline: none;
-    background: none;
-    border-bottom: 2px solid #8F6B36;
-    margin-bottom: 20px;
-    color: #8F6B36;
-    padding-bottom: 5px;
-}
-.register-form>a{
-    font-family: 'Gemunu Libre', sans-serif;
-    font-size: 18px;
-    text-decoration: underline;
-    color: aliceblue;
-    margin-bottom: 5px; 
-}
 .register-form>button{
     font-family: 'Gemunu Libre', sans-serif;
     font-size: 25px;
@@ -148,3 +151,30 @@ main .register-section{
     font-size: 25px;
     margin-top: 15px;
 }
+.message__error{
+    display: none;
+}
+.form__group i{
+    display: none;
+} 
+.message__submit-good {
+    font-size: 30px;
+    color: green;
+    display: none;
+}
+.message__submit-bad {
+    font-size: 30px;
+    color: red;
+    display: none;
+}
+
+/*Estilos para validacion de formulario*/
+
+.group__correct{
+    color: green;
+}
+
+.group__incorrect, f{
+    color: red;
+}
+

@@ -13,26 +13,52 @@
         <section class="register-section">
             <section class="register-links-form">
                 <a class="link" href="login.html">I already have an account</a>
-                <form action="" class="register-form">
-                    <label for="nombre">Name:</label>
-                    <input type="text" name="nombre" id="nombre">
+                <form id="form" action="" class="register-form">
+                    <label for="nombre">Username:</label>
+                    <div class="form__group" id="group__username">
+                        <input type="text" name="username" id="nombre"/> 
+                        <i class="estado-validacion fas fa-times-circle"></i> 
+                        <p class="message__error">El usuario tiene que tener entre 4 a 16 digitos y solo puede contener letras, numeros y guion bajo</p>
+                    </div>
+            
+                    <label for="email">Email:</label>
+                    <div class="form__group" id="group__email">
+                        <input type="email" name="email" id="email">
+                        <i class="estado-validacion fas fa-times-circle"></i> 
+                        <p class="message__error">El correo no es valido y solo puede contener letras, numeros, puntos y guion bajo y guiones</p>
+                    </div>
+                    
+                    <label for="password">Password:</label>
+                    <div class="form__group" id="group__password">
+                        <input type="password" name="password" id="password">
+                        <i class="estado-validacion fas fa-times-circle"></i> 
+                        <p class="message__error">La contraseña debe ser de 4 a 12 digitos</p>
+                    </div>
 
-                    <label for="correo">Email:</label>
-                    <input type="email" name="correo" id="correo">
+                    <label for="passwordrep">Repeat password:</label>
+                    <div class="form__group" id="group__passwordrep">
+                        <input type="password" name="passwordrep" id="passwordrep">
+                        <i class="estado-validacion fas fa-times-circle"></i> 
+                        <p class="message__error">Ambas contraseñas deben coincidir</p>
+                    </div>
 
-                    <label for="contrasenia">Password:</label>
-                    <input type="password" name="contrasenia" id="contrasenia">
+                    <label class="label-checkbox" for="terms">
+                        <div id="group__terms">
+                            <input type="checkbox" name="terms" id="terms">I have read and accept the <a href="">privacy policy</a>
+                        </div>
+                    </label>
 
-                    <label for="contrasenia_rep">Repeat password:</label>
-                    <input type="password" name="contrasenia_rep" id="contrasenia_rep">
-
-                    <label class="label-checkbox" for="politica_privacidad"><input type="checkbox" name="politica_privacidad" id="politica_privacidad">I have read and accept the <a href="">privacy policy</a></label>
-
-                    <label class="label-checkbox" for="publicidad"><input type="checkbox" name="publicidad" id="publicidad">Receive news and publicity</label>
+                    <label class="label-checkbox" for="terms">
+                        <div id="group__terms">
+                            <input type="checkbox" name="terms" id="terms">Receive news and publicity
+                        </div>
+                    </label>
 
                     <button type="submit">Create an account</button>
                     <p>Or well</p>
                     <button type="submit">Login with google <img src="img/iconos/google.png" alt=""></button>
+                    <p class="message__submit-good" id="form__message">Formulario enviado con exito</p>
+                    <p class="message__submit-bad" id="form__message">El formulario no esta completo</p>
                 </form>
             </section>
             <section class="section-logo-info">
@@ -41,5 +67,7 @@
             </section>
         </section>    
     </main>
+    <script src="js/register.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
