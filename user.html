@@ -8,21 +8,35 @@
     <link rel="stylesheet" href="css/user.css">
 </head>
 <body>
-    <header class="cabecera">
-        <figure class="cabecera__logo">
-            <img class="logo__img" src="img/logoOpcional.png" alt="logo">
-        </figure>
-        <nav class="cabecera__barra-navegacion">
-            <ul id="navs" class="barra-navegacion__apartados">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="votes.html">Votes</a></li>
-                <li><a href="breeds.html">Breeds</a></li>
-                <li><a href="imageSearch.html">Image/Search</a></li>
-                <li><a href="index.html#contactUs">Contact us</a></li>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img class="logo-img" src="img/logoOpcional.png" alt="logo">
+            </a>
+            <button class="nav-toggle">
+                <img src="img/iconos/menu.png" alt="">
+            </button>
+            <ul id="navs" class="nav-menu">
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="votes.html">Votes</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="breeds.html">Breeds</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="imageSearch.html">Image/Search</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="#contactUs">Contact us</a>
+                </li>
             </ul>
-            <ul class="barra-navegacion__apartados">
-                <li>
-                    <a href="user.html">Login</a><img class="apartados__iconos" src="img/iconos/login.png" alt="icono-login">
+            <ul class="nav-menu-login">
+                <li class="nav-menu-item">
+                    <a href="user.html">Login</a>
+                    <a href=""><img class="apartados__iconos" src="img/iconos/login.png" alt="icono-login"></a>
                 </li>
             </ul>
         </nav>
@@ -30,20 +44,23 @@
 
     <main>
         <h1 class="uploadImage-text">Upload your own images</h1>
-        <section class="section-uploadImage">
-            <section class="uploadImage-form">
-                <div class="container-uploadImage">
-                    <img class="uploadImage" src="img/iconos/upload.png" alt="subir_imagen">
+        <section class="section-uploadImage"> 
+            <form action="" class="form-upload">
+                <div class="form-image">
+                    <div class="container-uploadImage">
+                        <img class="uploadImage" src="img/iconos/upload.png" alt="subir_imagen">
+                    </div>
+                    <input type="file" name="input-file"/>
                 </div>
-                <form action="" class="form-upload">
+                <div class="form-inputs">
                     <input type="text" name="input-breed" id="input-breed" placeholder="Breed...">
                     <input type="text" name="input-features" id="input-features" placeholder="Features...">
                     <input type="text" name="input-weight" id="input-weight" placeholder="Weight range (Kg):">
-                    <input type="text" name="input-height" id="input-height" placeholder="Height range (cm):"">
-                    <input type="texty" name="input-years" id="input-years" placeholder="Years average life span:">
-                </form>
-            </section>
-            <button class="button-uploadImage" type="submit">Upload image</button>
+                    <input type="text" name="input-height" id="input-height" placeholder="Height range (cm):">
+                    <input type="text" name="input-years" id="input-years" placeholder="Years average life span:">
+                </div>
+                <button class="button-uploadImage" type="submit">Upload image</button>
+            </form>
         </section>
 
         <section class="section-favorites">
@@ -126,18 +143,18 @@
             </figure>
             <div class="pie-pagina__enlaces">
                 <a href="">Legal warming</a>
-                <a href="">Privacy policity<a>
+                <a href="">Privacy policity</a>
                 <a href="">Cookies</a>
                 <a href="">Help us by donating</a>
                 <a href="">About us</a>
             </div>
             <div class="pie-pagina__contact-me">
-                <span>Contact me</span>
-                <picture>
+                <p>Contact me</p>
+                <div class="pie-pagina__icons">
                     <img src="img/iconos/facebook.png" alt="facebook">
                     <img src="img/iconos/instagram.png" alt="instagram">
                     <img src="img/iconos/whatsapp.png" alt="whatsapp">
-                </picture>
+                </div>
             </div>
         </section>
     </footer>
