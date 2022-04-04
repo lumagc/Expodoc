@@ -23,54 +23,73 @@ a:link, a:visited, a:active {
 }
 
 /*-----Estilos Header-----*/
-.cabecera{
+.header{
     /*background: linear-gradient(#41A58D,#8F6B36, 5%);*/
     background: linear-gradient(rgb(65, 165, 141), rgb(143, 107, 54, 0.5));
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     font-family: 'Gemunu Libre', sans-serif;
 }
-.cabecera__logo{
-    height: 150px;
-    width: 20%;
-    margin: 10px 0 10px 20px;
-    /*border: 1px solid black;*/
-}
-.logo__img{
-    width: 90%;
-    height: inherit;
-}
-.cabecera__barra-navegacion{
+
+.header .nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    /*border: 1px solid black;*/
-    width: 75%;
+    
 }
-.barra-navegacion__apartados{
+.nav .logo{
+    height: 150px;
+    margin: 10px 0 10px 20px;
+}
+.logo-img{
+    height: inherit;
+}
+
+.nav-menu{
     display: flex;
     flex-wrap: wrap;
 }
-.barra-navegacion__apartados li{
-    display: inline-block;
+
+.nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item{
+    display: block;
+    font-size: 20px;
     border: 1px solid #888888;
     box-shadow: 1px 5px 5px #888888;
     background-color: #41A58D;
     padding: 15px;
+    text-transform: uppercase;
     
 }
-.barra-navegacion__apartados li a{
-    display: inline-block;
+.nav-menu .nav-menu-item a, .nav-menu-login .nav-menu-item a{
     color: aliceblue;
-    font-size: 20px;
+    display: block;
 }
+
+.nav-menu-login .nav-menu-item{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-menu-login .nav-menu-item>a{
+    display: flex;
+    padding-left: 5px;
+}
+
 .apartados__iconos{
-    display: inline-block;
-    margin: 0 auto;
-    height: 20px;
+    height: inherit;
+}
+
+.nav-toggle{
+    color:#8F6B36;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 30px;
+    cursor: pointer;
+    display: none;
+}
+.nav-toggle img{
+    height: 50px;
 }
 
 /*---------------------Main--------------------*/
@@ -83,7 +102,7 @@ main{
 }
 main .image-search-title{
     font-family: 'Bitter', serif;
-    font-size: 50px;
+    font-size: 62px;
     color: #8F6B36;
     margin-top: 30px;
 }
@@ -100,11 +119,11 @@ main .filtered-image-search{
 .filters-container .filter-text{
     color: #8F6B36;
     font-family: 'Gemunu Libre', sans-serif;
-    font-size: 35px;
+    font-size: 58px;
     cursor: pointer;
 }
 .filter-text>img{
-    height: 20px;
+    height: 32px;
 }
 .filters-container .filters{
     display: flex;
@@ -116,7 +135,7 @@ main .filtered-image-search{
 .filters>p{
     color: #8F6B36;
     font-family: 'Gemunu Libre', sans-serif;
-    font-size: 25px;
+    font-size: 40px;
     cursor: pointer;
 }
 .filters>p span{
@@ -131,7 +150,7 @@ main .filtered-image-search{
     background-color: #41A58D;
     border: 1px solid black;
     width: 92%;
-    height: 250px;
+    height: 300px;
     border-radius: 10%;
     overflow: hidden;
     position: relative;
@@ -139,32 +158,50 @@ main .filtered-image-search{
 
 .breed-container .dog-image{
     width: 100%;
-    height: 200px;
-   
+     
+}
+@supports(object-fit: cover){
+    .breed-container .dog-image{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
 }
 .breed-container .dog-image:hover{
     transition: all ease 0.8s;
     opacity: 0.3;
 }
 
-.breed-container .dog-name{
-    font-family: 'Karla', sans-serif;
-    font-size: 20px;
-    position: absolute;
-    top: 69%;
-    left: 4%;
-    color: aliceblue;
-}
 .breed-container .dog-likes-dislikes{
     position: absolute;
-    top: 84%;
-    left: 21%;
+    background-color: burlywood;
+    width: 100%;
+    height: 90px;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
 }
-.dog-likes-dislikes span{
-    color: aliceblue;
-    margin-right: 27px;
-    font-size: 22px;
+
+.dog-likes-dislikes .dog-name{
     font-family: 'Karla', sans-serif;
+    font-size: 24px;
+    padding: 4px 0 0 8px;
+    width: 100%;
+    color: aliceblue;
+}
+
+.dog-likes-dislikes .votes-content{
+    margin: 0 auto;
+}
+
+.votes-content span{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Karla', sans-serif;
+}
+.votes-content .vote-like {
+    margin-right: 15px;
 }
 .icono-like-dislike{
     height: 28px;

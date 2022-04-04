@@ -2,6 +2,14 @@
 let lis = document.querySelectorAll('#navs li');
 lis[2].style.backgroundColor = '#8F6B36';
 
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
+
+navToggle.addEventListener("click", () =>{
+    navMenu.classList.toggle("nav-menu_visible");
+    
+});
+
 function ver() {
     document.getElementById("subseccion").style.display="block"
 }
@@ -13,6 +21,9 @@ function verdiv() {
 function ocultardiv() {
     document.getElementById("subseccion").style.display="none"
 }
+
+
+
 /*--------------Llamadas a la API----------- */
 //Controla errores
 const handleError = response => {

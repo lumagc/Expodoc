@@ -8,21 +8,35 @@
     <link rel="stylesheet" href="css/breeds.css">
 </head>
 <body>
-    <header class="cabecera">
-        <figure class="cabecera__logo">
-            <img class="logo__img" src="img/logoOpcional.png" alt="logo">
-        </figure>
-        <nav class="cabecera__barra-navegacion">
-            <ul id="navs" class="barra-navegacion__apartados">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="votes.html">Votes</a></li>
-                <li><a href="breeds.html">Breeds</a></li>
-                <li><a href="imageSearch.html">Image/Search</a></li>
-                <li><a href="home.html#contactUs">Contact us</a></li>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img class="logo-img" src="img/logoOpcional.png" alt="logo">
+            </a>
+            <button class="nav-toggle">
+                <img src="img/iconos/menu.png" alt="">
+            </button>
+            <ul id="navs" class="nav-menu">
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="votes.html">Votes</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="breeds.html">Breeds</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="imageSearch.html">Image/Search</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="#contactUs">Contact us</a>
+                </li>
             </ul>
-            <ul class="barra-navegacion__apartados">
-                <li>
-                    <a href="user.html">Login</a><img class="apartados__iconos" src="img/iconos/login.png" alt="icono-login">
+            <ul class="nav-menu-login">
+                <li class="nav-menu-item">
+                    <a href="user.html">Login</a>
+                    <a href=""><img class="apartados__iconos" src="img/iconos/login.png" alt="icono-login"></a>
                 </li>
             </ul>
         </nav>
@@ -47,14 +61,21 @@
                 </section>
 
                 <section class="breed-buttons">
-
                     <p class="breed-name">Beagle</p>
-
-                    <div class="breed-button__favorite-like-dislike"><img class="icono" src="img/iconos/heart.png" alt="favorite">Add to favorites</div>
+                    <div class="breed-button__favorite-like-dislike">
+                        <img class="icono" src="img/iconos/heart.png" alt="favorite">
+                        <span>Add to favorites</span> 
+                    </div>
                     
-                    <div class="breed-button__favorite-like-dislike"><img class="icono" src="img/iconos/like.png" alt="like">Like 34</div>
+                    <div class="breed-button__favorite-like-dislike">
+                        <img class="icono" src="img/iconos/like.png" alt="like">
+                        <span>Like 34</span>
+                    </div>
                     
-                    <div class="breed-button__favorite-like-dislike"><img class="icono" src="img/iconos/dislike.png" alt="dislike"> Dislike 10</div>
+                    <div class="breed-button__favorite-like-dislike">
+                        <img class="icono" src="img/iconos/dislike.png" alt="dislike">
+                        <span>Dislike 10</span>
+                    </div>
                     
                 </section>
 
@@ -100,18 +121,18 @@
             </figure>
             <div class="pie-pagina__enlaces">
                 <a href="">Legal warming</a>
-                <a href="">Privacy policity<a>
+                <a href="">Privacy policity</a>
                 <a href="">Cookies</a>
                 <a href="">Help us by donating</a>
                 <a href="">About us</a>
             </div>
             <div class="pie-pagina__contact-me">
-                <span>Contact me</span>
-                <picture>
+                <p>Contact me</p>
+                <div class="pie-pagina__icons">
                     <img src="img/iconos/facebook.png" alt="facebook">
                     <img src="img/iconos/instagram.png" alt="instagram">
                     <img src="img/iconos/whatsapp.png" alt="whatsapp">
-                </picture>
+                </div>
             </div>
         </section>
     </footer>

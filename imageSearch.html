@@ -8,21 +8,35 @@
     <link rel="stylesheet" href="css/imageSearch.css">
 </head>
 <body>
-    <header class="cabecera">
-        <figure class="cabecera__logo">
-            <img class="logo__img" src="img/logoOpcional.png" alt="logo">
-        </figure>
-        <nav class="cabecera__barra-navegacion">
-            <ul id="navs" class="barra-navegacion__apartados">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="votes.html">Votes</a></li>
-                <li><a href="breeds.html">Breeds</a></li>
-                <li><a href="imageSearch.html">Image/Search</a></li>
-                <li><a href="index.html#contactUs">Contact us</a></li>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img class="logo-img" src="img/logoOpcional.png" alt="logo">
+            </a>
+            <button class="nav-toggle">
+                <img src="img/iconos/menu.png" alt="">
+            </button>
+            <ul id="navs" class="nav-menu">
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="votes.html">Votes</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="breeds.html">Breeds</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="imageSearch.html">Image/Search</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a class="nav-menu-link nav-link" href="#contactUs">Contact us</a>
+                </li>
             </ul>
-            <ul class="barra-navegacion__apartados">
-                <li>
-                    <a href="user.html">Login</a><img class="apartados__iconos" src="img/iconos/login.png" alt="icono-login">
+            <ul class="nav-menu-login">
+                <li class="nav-menu-item">
+                    <a href="user.html">Login</a>
+                    <a href=""><img class="apartados__iconos" src="img/iconos/login.png" alt="icono-login"></a>
                 </li>
             </ul>
         </nav>
@@ -42,95 +56,103 @@
             </section>
 
             <section class="all-images-search">
-                
                 <div class="breed-container">
-              
                     <img class="dog-image" src="img/imagenes/perro1.jpg" alt="perro">
-                    <p class="dog-name">Alsatian</p>
-                    <p class="dog-likes-dislikes">
-                        <span>45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
-                        <span>20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
-                    </p>
+                    <div class="dog-likes-dislikes">
+                        <p class="dog-name">Alsatian</p>
+                        <div class="votes-content">
+                            <span class="vote-like">45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
+                            <span class="vote-dislike">20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="breed-container">
-                   
                     <img class="dog-image" src="img/imagenes/perro2.jpg" alt="perro">
-                    <p class="dog-name">Beagle</p>
-                    <p class="dog-likes-dislikes">
-                        <span>45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
-                        <span>20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
-                    </p>
+                    <div class="dog-likes-dislikes">
+                        <p class="dog-name">Beagle</p>
+                        <div class="votes-content">
+                            <span class="vote-like">45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
+                            <span class="vote-dislike">20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="breed-container">
-                   
                     <img class="dog-image" src="img/imagenes/perro3.jpg" alt="perro">
-                    <p class="dog-name">Bull terrier</p>
-                    <p class="dog-likes-dislikes">
-                        <span>45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
-                        <span>20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
-                    </p>
+                    <div class="dog-likes-dislikes">
+                        <p class="dog-name">Bull terrier</p>
+                        <div class="votes-content">
+                            <span class="vote-like">45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
+                            <span class="vote-dislike">20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
+                        </div>
+                    </div>
                 </div>
             
                 <div class="breed-container">
-                    
                     <img class="dog-image" src="img/imagenes/perro4.jpg" alt="perro">
-                    <p class="dog-name">Teckel</p>
-                    <p class="dog-likes-dislikes">
-                        <span>45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
-                        <span>20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
-                    </p>
+                    <div class="dog-likes-dislikes">
+                        <p class="dog-name">Teckel</p>
+                        <div class="votes-content">
+                            <span class="vote-like">45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
+                            <span class="vote-dislike">20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="breed-container">
-                   
                     <img class="dog-image" src="img/imagenes/perro5.jpg" alt="perro">
-                    <p class="dog-name">Akita</p>
-                    <p class="dog-likes-dislikes">
-                        <span>45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
-                        <span>20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
-                    </p>
+                    <div class="dog-likes-dislikes">
+                        <p class="dog-name">Akita</p>
+                        <div class="votes-content">
+                            <span class="vote-like">45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
+                            <span class="vote-dislike">20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="breed-container">
-                    
                     <img class="dog-image" src="img/imagenes/perro6.jpg" alt="perro">
-                    <p class="dog-name">Mastiff</p>
-                    <p class="dog-likes-dislikes">
-                        <span>45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
-                        <span>20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
-                    </p>
+                    <div class="dog-likes-dislikes">
+                        <p class="dog-name">Mastiff</p>
+                        <div class="votes-content">
+                            <span class="vote-like">45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
+                            <span class="vote-dislike">20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
+                        </div>
+                    </div>
                 </div>
             
                 <div class="breed-container">
-                    
                     <img class="dog-image" src="img/imagenes/perro7.jpg" alt="perro">
-                    <p class="dog-name">Pug</p>
-                    <p class="dog-likes-dislikes">
-                        <span>45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
-                        <span>20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
-                    </p>
+                    <div class="dog-likes-dislikes">
+                        <p class="dog-name">Pug</p>
+                        <div class="votes-content">
+                            <span class="vote-like">45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
+                            <span class="vote-dislike">20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
+                        </div>
+                    </div>
                 </div>  
 
                 <div class="breed-container">
-                
                     <img class="dog-image" src="img/imagenes/perro8.jpg" alt="perro">
-                    <p class="dog-name">American stanford</p>
-                    <p class="dog-likes-dislikes">
-                        <span>45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
-                        <span>20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
-                    </p>
+                    <div class="dog-likes-dislikes">
+                        <p class="dog-name">American stanford</p>
+                        <div class="votes-content">
+                            <span class="vote-like">45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
+                            <span class="vote-dislike">20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="breed-container">
-                  
                     <img class="dog-image" src="img/imagenes/perro9.jpg" alt="perro">
-                    <p class="dog-name">Doberman</p>
-                    <p class="dog-likes-dislikes">
-                        <span>45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
-                        <span>20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
-                    </p>
+                    <div class="dog-likes-dislikes">
+                        <p class="dog-name">Doberman</p>
+                        <div class="votes-content">
+                            <span class="vote-like">45 <img class="icono-like-dislike" src="img/iconos/like.png"> </span>
+                            <span class="vote-dislike">20 <img class="icono-like-dislike" src="img/iconos/dislike.png"></span>
+                        </div>
+                    </div>
                 </div>
             </section>
 

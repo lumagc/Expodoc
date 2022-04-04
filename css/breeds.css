@@ -23,63 +23,83 @@ a:link, a:visited, a:active {
 }
 
 /*-----Estilos Header-----*/
-.cabecera{
+.header{
     /*background: linear-gradient(#41A58D,#8F6B36, 5%);*/
     background: linear-gradient(rgb(65, 165, 141), rgb(143, 107, 54, 0.5));
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     font-family: 'Gemunu Libre', sans-serif;
 }
-.cabecera__logo{
-    height: 150px;
-    width: 20%;
-    margin: 10px 0 10px 20px;
-    /*border: 1px solid black;*/
-}
-.logo__img{
-    width: 90%;
-    height: inherit;
-}
-.cabecera__barra-navegacion{
+
+.header .nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    /*border: 1px solid black;*/
-    width: 75%;
+    
 }
-.barra-navegacion__apartados{
+.nav .logo{
+    height: 150px;
+    margin: 10px 0 10px 20px;
+}
+.logo-img{
+    height: inherit;
+}
+
+.nav-menu{
     display: flex;
     flex-wrap: wrap;
 }
-.barra-navegacion__apartados li{
-    display: inline-block;
+
+.nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item{
+    display: block;
+    font-size: 20px;
     border: 1px solid #888888;
     box-shadow: 1px 5px 5px #888888;
     background-color: #41A58D;
     padding: 15px;
+    text-transform: uppercase;
     
 }
-.barra-navegacion__apartados li a{
-    display: inline-block;
+.nav-menu .nav-menu-item a, .nav-menu-login .nav-menu-item a{
     color: aliceblue;
-    font-size: 20px;
+    display: block;
 }
+
+.nav-menu-login .nav-menu-item{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-menu-login .nav-menu-item>a{
+    display: flex;
+    padding-left: 5px;
+}
+
 .apartados__iconos{
-    display: inline-block;
-    margin: 0 auto;
-    height: 20px;
+    height: inherit;
+}
+
+.nav-toggle{
+    color:#8F6B36;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 30px;
+    cursor: pointer;
+    display: none;
+}
+.nav-toggle img{
+    height: 50px;
 }
 
 /*---------------------Main--------------------*/
 main{
-    width: 70%;
+    width: 68%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
 }
 /*--------------Section-Breeds-----------*/
 
@@ -87,6 +107,7 @@ main .section-breeds{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 100%;
 }
 .breeds-filter{
     margin-top: 40px;
@@ -134,14 +155,22 @@ main .section-breeds{
 }
 .breed-image-buttons .breed-imagen-container{
     border: 1px solid black;
-    height: 350px;
-    width: 50%;
+    height: 390px;
+    width: 40%;
     overflow: hidden;
     border-radius: 10%;
     position: relative;
 }
 .breed-imagen-container .breed-img{
     width: 100%;
+}
+
+@supports(object-fit: cover){
+    .breed-imagen-container .breed-img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
 }
 .breed-imagen-container .breed-img-prev, .breed-imagen-container .breed-img-next{
     color: #8F6B36;
@@ -151,6 +180,11 @@ main .section-breeds{
     top: 38%;
     font-size: 40px;
     cursor: pointer;
+    border: 0;
+    background: 0;
+}
+.breed-imagen-container .breed-img-prev:hover, .breed-imagen-container .breed-img-next:hover{
+    background-color: #41A58D;
 }
 .breed-img-next{
     right: 0%;
@@ -162,6 +196,7 @@ main .section-breeds{
     font-family: 'Gemunu Libre', sans-serif;
     width: 45%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -186,19 +221,23 @@ main .section-breeds{
     margin-right: 8px;
     height: 30px;
 }
+.breed-button__favorite-like-dislike>span{
+    font-size: 28px;
+    text-align: center;
+}
 .section-breeds .breed-details{
+    margin-top: 30px;
+}
+.breed-details>p{
     color: #8F6B36;
     font-size: 28px;
     font-family: 'Karla', sans-serif;
-    margin-top: 30px;
 }
 
 /*-----------------Section - Previous Views------------*/
 main .section-previous-views{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     margin-top: 60px;
+    width: 100%;
 }
 .section-previous-views .previous-views-title{
     color: #8F6B36;
@@ -215,12 +254,19 @@ main .section-previous-views{
     border: 1px solid;
     border-radius: 10%;
     width: 23%;
-    height: 220px;
+    height: 265px;
     overflow: hidden;
     position: relative;
 }
 .previous-views-container-imgs .img-previous{
     width: 100%;
+}
+@supports(object-fit: cover){
+    .previous-views-container-imgs .img-previous{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
 }
 .previous-views-container-imgs .img-previous:hover{
     transition: all ease 0.8s;
@@ -228,19 +274,22 @@ main .section-previous-views{
 }
 .previous-views-container-imgs .name-dog-previous{
     position: absolute;
-    top: 88%;
-    left: 5%;
-    color: #8F6B36;
-    font-size: 15px;
+    top: 83%;
+    left: 7%;
+    color: aliceblue;
+    font-size: 20px;
     font-family: 'Bitter', serif;
+    background-color: #41A58D;
+    padding: 6px;
+    font-weight: bold;
 }
 
-/*------------Estilos Footer-------*/
+/*-----Estilos Footer-----*/
 .pie-pagina{
     background: linear-gradient(rgb(143, 107, 54, 0.5),rgb(65, 165, 141));
     color: aliceblue;
     font-family: 'Gemunu Libre', sans-serif;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 .pie-pagina__contenedor{
     height: inherit;
@@ -249,20 +298,1142 @@ main .section-previous-views{
     justify-content: space-between;
     align-items: center;
 }
-
-.caja-logo-pie__img{
-    height: 100px;
+.pie-pagina__contenedor .pie-pagina__caja-logo-pie {
+    font-size: 24px;
+    width: 25%;
+    padding: 25px 0 25px 15px;
 }
 
-.pie-pagina__enlaces{
+.pie-pagina__caja-logo-pie .caja-logo-pie__img{
+    height: 120px;
+}
+
+.pie-pagina__contenedor .pie-pagina__enlaces{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    width: 25%;
+    align-items: center;
+    padding: 25px 0;
     
 }
 .pie-pagina__enlaces a{
     color: aliceblue;
+    font-size: 24px;
+    padding: 3px 0;
 }
-.pie-pagina__contact-me{
+.pie-pagina__contenedor .pie-pagina__contact-me{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    width: 25%;
+    align-items: end;
+    padding: 25px 15px 25px 0px;
+}
+.pie-pagina__contact-me p{
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+.pie-pagina__contact-me .pie-pagina__icons{
+    
+}
+.pie-pagina__contact-me .pie-pagina__icons>img{
+
+}
+
+/*--------------------------------------------------------Media Query----------------------------------------------------------*/
+
+@media only screen (max-width: 500px)  {
+    main{
+        width: 100%;
+    }
+    /*--------------Section-Breeds-----------*/
+
+    main .section-breeds{
+        width: inherit;
+        padding: 0 70px;
+    }
+    
+    .breeds-filter__text #seccion{
+        font-size: 45px;
+        
+    }
+
+    .breeds-filter__text #seccion>span{
+        font-size: 35px;
+    }
+
+    .breeds-filter__text #subseccion{ 
+        width: 288px;
+        height: 340px; 
+    }
+
+    #subseccion p{
+        font-size: 20px;
+    }
+    
+    .breed-image-buttons{
+        flex-direction: column;
+    }
+
+    .breed-image-buttons .breed-imagen-container{
+        width: 100%;
+        height: 270px;
+
+    }
+    
+    .breed-imagen-container .breed-img-prev, .breed-imagen-container .breed-img-next{
+        width: 12%;
+        height: 17%;
+        top: 42%;
+        font-size: 22px;
+    }
+
+    .breed-image-buttons .breed-buttons{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .breed-buttons .breed-name{
+        width: 100%;
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .breed-buttons .breed-button__favorite-like-dislike{ 
+        padding: 0;
+        width: 80px;
+        height: 60px;
+    }
+
+    .breed-button__favorite-like-dislike .icono{
+        height: 30px;
+        margin: 0;
+    }
+    @supports(object-fit: cover){
+        .breed-button__favorite-like-dislike .icono{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          padding: 12px;
+        }
+    }
+
+    .breed-button__favorite-like-dislike>span{
+        display: none;
+    }
+
+    .section-breeds .breed-details{
+        margin-top: 30px;
+    }
+    .breed-details>p{
+        font-size: 20px;
+    }
+
+    /*-----------------Section - Previous Views------------*/
+    main .section-previous-views{
+        width: inherit;
+        padding: 0 70px;
+    }
+
+    .section-previous-views .previous-views-title{
+        font-size: 28px;
+    }
+
+    .section-previous-views .previous-views-container-divs{
+        justify-content: center;
+    }
+    .previous-views-container-divs .previous-views-container-imgs{
+        width: 100%;
+    }
+    .previous-views-container-divs .previous-views-container-imgs:nth-last-child(-n+3){
+        display: none;
+    }
+
+    .previous-views-container-imgs .img-previous{
+        width: 100%;
+    }
+    @supports(object-fit: cover){
+        .previous-views-container-imgs .img-previous{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
+
+    .previous-views-container-imgs .name-dog-previous{
+        top: 85%;
+        font-size: 18px;
+    }
+
+    /*-------------------------Estilos Footer-------*/
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie{
+        width: 30%;
+    }
+    .pie-pagina__caja-logo-pie>figcaption{
+        font-size: 14px;
+    }
+    .caja-logo-pie__img{
+        height: 60px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__enlaces{
+        width: 25%;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me{
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 600px)  {
+    main{
+        width: 100%;
+    }
+    /*--------------Section-Breeds-----------*/
+
+    main .section-breeds{
+        width: inherit;
+        padding: 0 80px;
+    }
+    
+    .breeds-filter__text #seccion{
+        font-size: 50px;
+    }
+
+    .breeds-filter__text #seccion>span{
+        font-size: 35px;
+    }
+
+    .breeds-filter__text #subseccion{ 
+        width: 288px;
+        height: 340px; 
+    }
+
+    #subseccion p{
+        font-size: 20px;
+    }
+    
+    .breed-image-buttons{
+        flex-direction: column;
+    }
+
+    .breed-image-buttons .breed-imagen-container{
+        width: 100%;
+        height: 340px;
+
+    }
+    
+    .breed-imagen-container .breed-img-prev, .breed-imagen-container .breed-img-next{
+        width: 12%;
+        height: 17%;
+        top: 42%;
+        font-size: 22px;
+    }
+
+    .breed-image-buttons .breed-buttons{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .breed-buttons .breed-name{
+        width: 100%;
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .breed-buttons .breed-button__favorite-like-dislike{ 
+        padding: 0;
+        width: 100px;
+        height: 70px;
+    }
+
+    .breed-button__favorite-like-dislike .icono{
+        height: 30px;
+        margin: 0;
+    }
+    @supports(object-fit: cover){
+        .breed-button__favorite-like-dislike .icono{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          padding: 12px;
+        }
+    }
+
+    .breed-button__favorite-like-dislike>span{
+        display: none;
+    }
+
+    .section-breeds .breed-details{
+        margin-top: 30px;
+    }
+    .breed-details>p{
+        font-size: 28px;
+    }
+
+    /*-----------------Section - Previous Views------------*/
+    main .section-previous-views{
+        width: inherit;
+        padding: 0 80px;
+    }
+
+    .section-previous-views .previous-views-title{
+        font-size: 40px;
+    }
+
+    .section-previous-views .previous-views-container-divs{
+        justify-content: center
+    }
+    .previous-views-container-divs .previous-views-container-imgs{
+        width: 100%;
+        height: 300px;
+    }
+    .previous-views-container-divs .previous-views-container-imgs:nth-last-child(-n+3){
+        display: none;
+    }
+
+    .previous-views-container-imgs .img-previous{
+        width: 100%;
+    }
+    @supports(object-fit: cover){
+        .previous-views-container-imgs .img-previous{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
+
+    .previous-views-container-imgs .name-dog-previous{
+        top: 85%;
+        font-size: 18px;
+    }
+
+    /*-------------------------Estilos Footer-------*/
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie{
+        width: 30%;
+    }
+    .pie-pagina__caja-logo-pie>figcaption{
+        font-size: 14px;
+    }
+    .caja-logo-pie__img{
+        height: 60px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__enlaces{
+        width: 25%;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me{
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 750px)  {
+    main{
+        width: 100%;
+    }
+    /*--------------Section-Breeds-----------*/
+
+    main .section-breeds{
+        width: inherit;
+        padding: 0 100px;
+    }
+    
+    .breeds-filter__text #seccion{
+        font-size: 50px;
+    }
+
+    .breeds-filter__text #seccion>span{
+        font-size: 35px;
+    }
+
+    .breeds-filter__text #subseccion{ 
+        width: 288px;
+        height: 340px; 
+    }
+
+    #subseccion p{
+        font-size: 20px;
+    }
+    
+    .breed-image-buttons{
+        flex-direction: column;
+    }
+
+    .breed-image-buttons .breed-imagen-container{
+        width: 100%;
+        height: 340px;
+
+    }
+    
+    .breed-imagen-container .breed-img-prev, .breed-imagen-container .breed-img-next{
+        width: 12%;
+        height: 17%;
+        top: 42%;
+        font-size: 22px;
+    }
+
+    .breed-image-buttons .breed-buttons{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .breed-buttons .breed-name{
+        width: 100%;
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .breed-buttons .breed-button__favorite-like-dislike{ 
+        padding: 0;
+        width: 100px;
+        height: 70px;
+    }
+
+    .breed-button__favorite-like-dislike .icono{
+        height: 30px;
+        margin: 0;
+    }
+    @supports(object-fit: cover){
+        .breed-button__favorite-like-dislike .icono{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          padding: 12px;
+        }
+    }
+
+    .breed-button__favorite-like-dislike>span{
+        display: none;
+    }
+
+    .section-breeds .breed-details{
+        margin-top: 30px;
+    }
+    .breed-details>p{
+        font-size: 28px;
+    }
+
+    /*-----------------Section - Previous Views------------*/
+    main .section-previous-views{
+        width: inherit;
+        padding: 0 100px;
+    }
+
+    .section-previous-views .previous-views-title{
+        font-size: 40px;
+    }
+
+    .section-previous-views .previous-views-container-divs{
+        justify-content: center
+    }
+    .previous-views-container-divs .previous-views-container-imgs{
+        width: 80%;
+        height: 300px;
+    }
+    .previous-views-container-divs .previous-views-container-imgs:nth-last-child(-n+3){
+        display: none;
+    }
+
+    .previous-views-container-imgs .img-previous{
+        width: 100%;
+    }
+    @supports(object-fit: cover){
+        .previous-views-container-imgs .img-previous{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
+
+    .previous-views-container-imgs .name-dog-previous{
+        top: 85%;
+        font-size: 18px;
+    }
+
+    /*-------------------------Estilos Footer-------*/
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie{
+        width: 30%;
+    }
+    .pie-pagina__caja-logo-pie>figcaption{
+        font-size: 14px;
+    }
+    .caja-logo-pie__img{
+        height: 60px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__enlaces{
+        width: 25%;
+    }
+    .pie-pagina__enlaces a{
+
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me{
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 751px) and (max-width: 900px)  {
+    main{
+        width: 100%;
+    }
+    /*--------------Section-Breeds-----------*/
+
+    main .section-breeds{
+        width: inherit;
+        padding: 0 80px;
+    }
+    
+    .breeds-filter__text #seccion{
+        font-size: 60px;
+    }
+
+    .breeds-filter__text #seccion>span{
+        font-size: 35px;
+    }
+
+    .breeds-filter__text #subseccion{ 
+        width: 288px;
+        height: 340px; 
+    }
+
+    #subseccion p{
+        font-size: 20px;
+    }
+    
+    .breed-image-buttons{
+        flex-direction: column;
+    }
+
+    .breed-image-buttons .breed-imagen-container{
+        width: 100%;
+        height: 390px;
+
+    }
+    
+    .breed-imagen-container .breed-img-prev, .breed-imagen-container .breed-img-next{
+        width: 12%;
+        height: 17%;
+        top: 42%;
+        font-size: 22px;
+    }
+
+    .breed-image-buttons .breed-buttons{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .breed-buttons .breed-name{
+        width: 100%;
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .breed-buttons .breed-button__favorite-like-dislike{ 
+        padding: 0;
+        width: 135px;
+        height: 85px;
+    }
+
+    .breed-button__favorite-like-dislike .icono{
+        height: 30px;
+        margin: 0;
+    }
+    @supports(object-fit: cover){
+        .breed-button__favorite-like-dislike .icono{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          padding: 12px;
+        }
+    }
+
+    .breed-button__favorite-like-dislike>span{
+        display: none;
+    }
+
+    .section-breeds .breed-details{
+        margin-top: 30px;
+    }
+    .breed-details>p{
+        font-size: 38px;
+    }
+
+    /*-----------------Section - Previous Views------------*/
+    main .section-previous-views{
+        width: inherit;
+        padding: 0 80px;
+    }
+
+    .section-previous-views .previous-views-title{
+        font-size: 50px;
+    }
+
+    .section-previous-views .previous-views-container-divs{
+        justify-content: space-between
+    }
+    .previous-views-container-divs .previous-views-container-imgs{
+        width: 45%;
+        height: 250px;
+    }
+    .previous-views-container-divs .previous-views-container-imgs:nth-last-child(-n+2){
+        display: none;
+    }
+
+    .previous-views-container-imgs .img-previous{
+        width: 100%;
+    }
+    @supports(object-fit: cover){
+        .previous-views-container-imgs .img-previous{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
+
+    .previous-views-container-imgs .name-dog-previous{
+        top: 85%;
+        font-size: 18px;
+    }
+
+    /*-------------------------Estilos Footer-------*/
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie{
+        width: 30%;
+    }
+    .pie-pagina__caja-logo-pie>figcaption{
+        font-size: 20px;
+    }
+    .caja-logo-pie__img{
+        height: 80px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__enlaces{
+        width: 25%;
+    }
+
+    .pie-pagina__enlaces>a{
+        font-size: 18px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me{
+        width: 25%;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me>span{
+        font-size: 26px;
+    }
+    .pie-pagina__contact-me picture>img{
+        height: 42px;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1310px)  {
+    main{
+        width: 85%;
+    }
+    /*--------------Section-Breeds-----------*/
+
+    main .section-breeds{
+        width: inherit;
+        padding: 0 80px;
+    }
+    
+    .breeds-filter__text #seccion{
+        font-size: 60px;
+    }
+
+    .breeds-filter__text #seccion>span{
+        font-size: 35px;
+    }
+
+    .breeds-filter__text #subseccion{ 
+        width: 288px;
+        height: 340px; 
+    }
+
+    #subseccion p{
+        font-size: 20px;
+    }
+    
+    .breed-image-buttons{
+        flex-direction: column;
+    }
+
+    .breed-image-buttons .breed-imagen-container{
+        width: 100%;
+        height: 390px;
+
+    }
+    
+    .breed-imagen-container .breed-img-prev, .breed-imagen-container .breed-img-next{
+        width: 12%;
+        height: 17%;
+        top: 42%;
+        font-size: 22px;
+    }
+
+    .breed-image-buttons .breed-buttons{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .breed-buttons .breed-name{
+        width: 100%;
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .breed-buttons .breed-button__favorite-like-dislike{ 
+        padding: 0;
+        width: 135px;
+        height: 85px;
+    }
+
+    .breed-button__favorite-like-dislike .icono{
+        height: 30px;
+        margin: 0;
+    }
+    @supports(object-fit: cover){
+        .breed-button__favorite-like-dislike .icono{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          padding: 12px;
+        }
+    }
+
+    .breed-button__favorite-like-dislike>span{
+        display: none;
+    }
+
+    .section-breeds .breed-details{
+        margin-top: 30px;
+    }
+    .breed-details>p{
+        font-size: 38px;
+    }
+
+    /*-----------------Section - Previous Views------------*/
+    main .section-previous-views{
+        width: inherit;
+        padding: 0 80px;
+    }
+
+    .section-previous-views .previous-views-title{
+        font-size: 50px;
+    }
+
+    .section-previous-views .previous-views-container-divs{
+        justify-content: space-between;
+    }
+    .previous-views-container-divs .previous-views-container-imgs{
+        width: 45%;
+        height: 230px;
+        margin-bottom: 40px;
+    }
+
+    .previous-views-container-imgs .img-previous{
+        width: 100%;
+    }
+    @supports(object-fit: cover){
+        .previous-views-container-imgs .img-previous{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
+
+    .previous-views-container-imgs .name-dog-previous{
+        top: 85%;
+        font-size: 18px;
+    }
+
+    /*-------------------------Estilos Footer-------*/
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie{
+        width: 30%;
+    }
+    .pie-pagina__caja-logo-pie>figcaption{
+        font-size: 20px;
+    }
+    .caja-logo-pie__img{
+        height: 80px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__enlaces{
+        width: 25%;
+    }
+
+    .pie-pagina__enlaces>a{
+        font-size: 18px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me{
+        width: 25%;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me>span{
+        font-size: 26px;
+    }
+    .pie-pagina__contact-me picture>img{
+        height: 42px;
+    }
+}
+
+@media only screen and (min-width: 1311px) and (max-width: 1600px)  {
+    main{
+        width: 90%;
+    }
+    /*--------------Section-Breeds-----------*/
+
+    main .section-breeds{
+        width: inherit;
+        padding: 0 80px;
+    }
+    
+    .breeds-filter__text #seccion{
+        font-size: 60px;
+    }
+
+    .breeds-filter__text #seccion>span{
+        font-size: 35px;
+    }
+
+    .breeds-filter__text #subseccion{ 
+        width: 288px;
+        height: 340px; 
+    }
+
+    #subseccion p{
+        font-size: 20px;
+    }
+    
+    .breed-image-buttons{
+        flex-direction: column;
+    }
+
+    .breed-image-buttons .breed-imagen-container{
+        width: 100%;
+        height: 600px;
+
+    }
+    
+    .breed-imagen-container .breed-img-prev, .breed-imagen-container .breed-img-next{
+        width: 12%;
+        height: 17%;
+        top: 42%;
+        font-size: 22px;
+    }
+
+    .breed-image-buttons .breed-buttons{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .breed-buttons .breed-name{
+        width: 100%;
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .breed-buttons .breed-button__favorite-like-dislike{ 
+        padding: 0;
+        width: 135px;
+        height: 85px;
+    }
+
+    .breed-button__favorite-like-dislike .icono{
+        height: 30px;
+        margin: 0;
+    }
+    @supports(object-fit: cover){
+        .breed-button__favorite-like-dislike .icono{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          padding: 12px;
+        }
+    }
+
+    .breed-button__favorite-like-dislike>span{
+        display: none;
+    }
+
+    .section-breeds .breed-details{
+        margin-top: 30px;
+    }
+    .breed-details>p{
+        font-size: 38px;
+    }
+
+    /*-----------------Section - Previous Views------------*/
+    main .section-previous-views{
+        width: inherit;
+        padding: 0 80px;
+    }
+
+    .section-previous-views .previous-views-title{
+        font-size: 50px;
+    }
+
+    .section-previous-views .previous-views-container-divs{
+        justify-content: space-between;
+    }
+    .previous-views-container-divs .previous-views-container-imgs{
+        width: 42%;
+        height: 340px;
+        margin-bottom: 40px;
+    }
+
+    .previous-views-container-imgs .img-previous{
+        width: 100%;
+    }
+    @supports(object-fit: cover){
+        .previous-views-container-imgs .img-previous{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
+
+    .previous-views-container-imgs .name-dog-previous{
+        top: 85%;
+        font-size: 18px;
+    }
+
+    /*-------------------------Estilos Footer-------*/
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie{
+        width: 30%;
+    }
+    .pie-pagina__caja-logo-pie>figcaption{
+        font-size: 20px;
+    }
+    .caja-logo-pie__img{
+        height: 80px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__enlaces{
+        width: 25%;
+    }
+
+    .pie-pagina__enlaces>a{
+        font-size: 18px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me{
+        width: 25%;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me>span{
+        font-size: 26px;
+    }
+    .pie-pagina__contact-me picture>img{
+        height: 42px;
+    }
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1810px)  {
+    main{
+        width: 80%;
+    }
+    /*--------------Section-Breeds-----------*/
+
+    main .section-breeds{
+        width: inherit;
+        padding: 0 80px;
+    }
+    
+    .breeds-filter__text #seccion{
+        font-size: 60px;
+    }
+
+    .breeds-filter__text #seccion>span{
+        font-size: 35px;
+    }
+
+    .breeds-filter__text #subseccion{ 
+        width: 288px;
+        height: 340px; 
+    }
+
+    #subseccion p{
+        font-size: 20px;
+    }
+    
+    .breed-image-buttons{
+        flex-direction: column;
+    }
+
+    .breed-image-buttons .breed-imagen-container{
+        width: 100%;
+        height: 600px;
+
+    }
+    
+    .breed-imagen-container .breed-img-prev, .breed-imagen-container .breed-img-next{
+        width: 12%;
+        height: 17%;
+        top: 42%;
+        font-size: 22px;
+    }
+
+    .breed-image-buttons .breed-buttons{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .breed-buttons .breed-name{
+        width: 100%;
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .breed-buttons .breed-button__favorite-like-dislike{ 
+        padding: 0;
+        width: 135px;
+        height: 85px;
+    }
+
+    .breed-button__favorite-like-dislike .icono{
+        height: 30px;
+        margin: 0;
+    }
+    @supports(object-fit: cover){
+        .breed-button__favorite-like-dislike .icono{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          padding: 12px;
+        }
+    }
+
+    .breed-button__favorite-like-dislike>span{
+        display: none;
+    }
+
+    .section-breeds .breed-details{
+        margin-top: 30px;
+    }
+    .breed-details>p{
+        font-size: 38px;
+    }
+
+    /*-----------------Section - Previous Views------------*/
+    main .section-previous-views{
+        width: inherit;
+        padding: 0 80px;
+    }
+
+    .section-previous-views .previous-views-title{
+        font-size: 50px;
+    }
+
+    .section-previous-views .previous-views-container-divs{
+        justify-content: space-between;
+    }
+    .previous-views-container-divs .previous-views-container-imgs{
+        width: 42%;
+        height: 340px;
+        margin-bottom: 40px;
+    }
+
+    .previous-views-container-imgs .img-previous{
+        width: 100%;
+    }
+    @supports(object-fit: cover){
+        .previous-views-container-imgs .img-previous{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
+
+    .previous-views-container-imgs .name-dog-previous{
+        top: 85%;
+        font-size: 18px;
+    }
+
+    /*-------------------------Estilos Footer-------*/
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie{
+        width: 30%;
+    }
+    .pie-pagina__caja-logo-pie>figcaption{
+        font-size: 20px;
+    }
+    .caja-logo-pie__img{
+        height: 80px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__enlaces{
+        width: 25%;
+    }
+
+    .pie-pagina__enlaces>a{
+        font-size: 18px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me{
+        width: 25%;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__contact-me>span{
+        font-size: 26px;
+    }
+    .pie-pagina__contact-me picture>img{
+        height: 42px;
+    }
+}
+
+/* menu hamburguesa*/
+@media (max-width: 860px){
+    
+    .nav .logo{
+        height: 90px;
+    }
+
+    .nav-menu{
+        flex-direction: column;
+        margin-right: 20px;
+        background: rgb(65, 165, 141, 0.5);
+        position: fixed;
+        top: 110px;
+        width: 100%;
+        padding: 20px 0;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    .nav-menu .nav-menu-item {
+        box-shadow: none;
+    }
+    .nav-menu .nav-menu-item:hover {
+        transition: all ease 0.5s;
+        background-color: #8F6B36;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu_visible{
+        left: 0;
+        z-index: 1;
+    }
+    .most-liked-div__caja-img, .more-disliked-div__caja-img {
+        height: 180px;
+    }
 }

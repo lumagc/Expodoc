@@ -1,6 +1,19 @@
 let lis = document.querySelectorAll('#navs li');
 lis[3].style.backgroundColor = '#8F6B36';
 
+let div = document.querySelectorAll('.breed-container')
+let box = document.querySelector('.votes-content');
+
+
+div.forEach(element => {
+    element.addEventListener("mouseover", () => {
+        element.querySelector('.dog-likes-dislikes').style.display = "flex";
+    })
+    element.addEventListener("mouseout", () => {
+        element.querySelector('.dog-likes-dislikes').style.display = "none";
+    })
+});
+
 //<--------Llamada a la API--------->
 
 const handleError = response => {
@@ -53,7 +66,7 @@ const llamadaRazas = (num, index) => {
     .then(handleError)
     .then(response => response.json())
     .then(response=>{
-        console.log(response);
+        //console.log(response);
         obtenerRazaAleatoria(response, index)
     })
     .catch(error=>{
