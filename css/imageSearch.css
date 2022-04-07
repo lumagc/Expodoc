@@ -74,8 +74,8 @@ a:link, a:visited, a:active {
     padding-left: 5px;
 }
 
-.apartados__iconos{
-    height: inherit;
+.apartados__iconos>i{
+    color: #8F6B36;
 }
 
 .nav-toggle{
@@ -199,8 +199,8 @@ main .filtered-image-search{
 .votes-content .vote-like {
     margin-right: 15px;
 }
-.icono-like-dislike{
-    height: 28px;
+.vote-like>i, .vote-dislike>i{
+    font-size: 28px;
     cursor: pointer;
 }
 .filtered-image-search .buttons-prev-next{
@@ -213,16 +213,19 @@ main .filtered-image-search{
 .buttons-prev-next>p{
     background-color: #41A58D;
     color: aliceblue;
-    font-size: 35px;
+    font-size: 40px;
     font-family: 'Gemunu Libre', sans-serif;
     margin-right: 30px;
-    padding: 5px 14px;
+    padding: 10px 14px;
     border-radius: 22%;
     cursor: pointer;
     width: 180px;
 }
 .buttons-prev-next>p:hover{
     background-color: #8F6B36;
+}
+.buttons-prev-next p>i{
+    font-size: 30px;
 }
 .buttons-prev-next>.prev{
     text-align: start;
@@ -281,4 +284,15 @@ main .filtered-image-search{
 .pie-pagina__contact-me p{
     margin-bottom: 8px;
     font-size: 28px;
+    width: 60%;
+}
+.pie-pagina__contact-me .pie-pagina__icons{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pie-pagina__icons>i{
+    color: #8F6B36;
+    font-size: 45px;
 }

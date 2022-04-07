@@ -51,7 +51,7 @@ a:link, a:visited, a:active {
 
 .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item{
     display: block;
-    font-size: 20px;
+    font-size: 27px;
     border: 1px solid #888888;
     box-shadow: 1px 5px 5px #888888;
     background-color: #41A58D;
@@ -73,8 +73,8 @@ a:link, a:visited, a:active {
     padding-left: 5px;
 }
 
-.apartados__iconos{
-    height: inherit;
+.apartados__iconos>i{
+    color: #8F6B36;
 }
 
 .nav-toggle{
@@ -130,8 +130,9 @@ main .section-voting{
     text-decoration: underline #41A58D;
     margin-right: 40px;
 }
-.filters__text .icono-search{
-    height: 30px;
+.filters__text>i{
+    font-size: 30px;
+    transform: scaleX(-1);
 }
 .voting__img{
     border: 1px solid black;
@@ -143,12 +144,13 @@ main .section-voting{
     position: relative;
     margin-top: 40px;
 }
-.voting__img .icono-favorite{
+.voting__img>i{
     position: absolute;
     top: 20px;
     left: 30px;
-    height: 80px;
+    font-size: 80px;
     cursor: pointer;
+    color: aliceblue;
 }
 .voting__img .img-perro{
     height: inherit;
@@ -182,9 +184,9 @@ main .section-voting{
     transition: all ease 0.8s;
     background-color: #8F6B36;
 }
-
-.icono-like-dislike{
-    height: 30px;
+.button__like-dislike>i{
+    font-size: 30px;
+    color: #8F6B36;
 }
 
 .voting__link{
@@ -201,9 +203,6 @@ main .section-voting{
 
 /*-----------------Section - Previous Views------------*/
 main .section-previous-views{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     margin-top: 60px;
     width: 100%;
 }
@@ -213,6 +212,10 @@ main .section-previous-views{
     font-family: 'Bitter', serif;
     margin-bottom: 25px;
 }
+.previous-views-title>i{
+    font-size: 30px;
+    color: #8F6B36;
+}
 .section-previous-views .previous-views-container-divs{
     display: flex;
     flex-wrap: wrap;
@@ -221,24 +224,31 @@ main .section-previous-views{
 .previous-views-container-divs .previous-views-container-imgs{
     border: 1px solid;
     border-radius: 10%;
-    height: 220px;
+    width: 21%;
+    height: 265px;
     overflow: hidden;
     position: relative;
 }
 .previous-views-container-imgs .img-previous{
-    height: inherit;
+    width: 100%;
 }
-.previous-views-container-imgs .img-previous:hover{
-    transition: all ease 0.8s;
-    opacity: 0.3;
+@supports(object-fit: cover){
+    .previous-views-container-imgs .img-previous{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
 }
 .previous-views-container-imgs .name-dog-previous{
     position: absolute;
-    top: 88%;
-    left: 5%;
-    color: #8F6B36;
-    font-size: 15px;
+    top: 83%;
+    left: 7%;
+    color: aliceblue;
+    font-size: 20px;
     font-family: 'Bitter', serif;
+    background-color: #41A58D;
+    padding: 6px;
+    font-weight: bold;
 }
 
 /*-----Estilos Footer-----*/
@@ -250,33 +260,57 @@ main .section-previous-views{
 }
 .pie-pagina__contenedor{
     height: inherit;
-    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-
-.caja-logo-pie__img{
-    height: 100px;
+.pie-pagina__contenedor .pie-pagina__caja-logo-pie {
+    font-size: 24px;
+    width: 25%;
+    padding: 25px 0 25px 15px;
 }
 
-.pie-pagina__enlaces{
+.pie-pagina__caja-logo-pie .caja-logo-pie__img{
+    height: 120px;
+}
+
+.pie-pagina__contenedor .pie-pagina__enlaces{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 25%;
+    align-items: center;
+    padding: 25px 0;
     
 }
 .pie-pagina__enlaces a{
     color: aliceblue;
+    font-size: 24px;
+    padding: 3px 0;
 }
-.pie-pagina__contact-me{
+.pie-pagina__contenedor .pie-pagina__contact-me{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 25%;
+    align-items: end;
+    padding: 25px 15px 25px 0px;
 }
-.pie-pagina__contact-me span{
+.pie-pagina__contact-me p{
     margin-bottom: 8px;
+    font-size: 28px;
+    width: 60%;
+}
+.pie-pagina__contact-me .pie-pagina__icons{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pie-pagina__icons>i{
+    color: #8F6B36;
+    font-size: 45px;
 }
 
 /*------------Media-Querys---------*/

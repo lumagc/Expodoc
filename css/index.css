@@ -51,7 +51,7 @@ a:link, a:visited, a:active {
 
 .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item{
     display: block;
-    font-size: 20px;
+    font-size: 27px;
     border: 1px solid #888888;
     box-shadow: 1px 5px 5px #888888;
     background-color: #41A58D;
@@ -73,8 +73,8 @@ a:link, a:visited, a:active {
     padding-left: 5px;
 }
 
-.apartados__iconos{
-    height: inherit;
+.apartados__iconos>i{
+    color: #8F6B36;
 }
 
 .nav-toggle{
@@ -97,7 +97,7 @@ a:link, a:visited, a:active {
 
 /*---Main-Slider---*/
 .main-slider{
-    height: 350px;
+    height: 500px;
     margin-bottom: 65px;
 }
 .main-slider__contenedor-slider{
@@ -111,17 +111,18 @@ a:link, a:visited, a:active {
     
 }
 .main-slider__contenedor-slider p{
-    width: 600px;
-    font-size: 60px;
+    width: 50%;
+    font-size: 80px;
     font-family: 'Bitter', serif;
     margin: 30px 0 0 30px;
     color: aliceblue;
     position: absolute;
     left: 0;
+    font-weight: bold;
 }
 .main-slider__contenedor-slider .button-knowMore{
     color: aliceblue;
-    font-size: 25px;
+    font-size: 35px;
     font-family: 'Gemunu Libre', sans-serif;
     margin-left: 30px;
     padding: 15px 30px;
@@ -129,7 +130,7 @@ a:link, a:visited, a:active {
     background: #41A58D;
     display: block;
     position: absolute;
-    top:70%;
+    top:75%;
 
 }
 .main-slider__contenedor-slider .button-knowMore:hover{
@@ -141,11 +142,11 @@ a:link, a:visited, a:active {
 .main-slider__contenedor-slider>a{
     position: absolute;
     cursor: pointer;
-    top: 40%;
+    top: 38%;
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 70px;
 }
 .main-slider__contenedor-slider>a:hover{
     background-color: darkgray;
@@ -184,8 +185,10 @@ a:link, a:visited, a:active {
     margin-right: 50px;
 }
 
-.link-filter>img{
-    height: 25px;
+.link-filter>i{
+    color: #8F6B36;
+    font-size: 30px;
+    transform: scaleX(-1);
 }
 
 .main-home__like-disliked{
@@ -198,8 +201,8 @@ a:link, a:visited, a:active {
     font-family: 'Bitter', serif;
     color: #8F6B36;
 }
-.most-liked-title .icons, .more-disliked-title .icons{
-    height: 40px;
+.most-liked-title>i, .more-disliked-title>i{
+    font-size: 40px;
 }
 
 .most-liked-div, .more-disliked-div{
@@ -234,10 +237,14 @@ a:link, a:visited, a:active {
     top: 46%;
     display: flex;
     justify-content: center;
+    
 }
-
 .likes-dislikes .like, .likes-dislikes .dislike{
-    font-size: 27px;
+    color: aliceblue;
+    font-size: 30px;
+}
+.likes-dislikes .like>i, .likes-dislikes .dislike>i{
+    font-size: 30px;
     color: #8F6B36;
 }
 .likes-dislikes .like{
@@ -248,23 +255,23 @@ a:link, a:visited, a:active {
     margin-left: 20px;
 }
 .main-home__button{
+    display: block;
+    text-align: center;
     background-color: #41A58D;
-    display: flex;
-    justify-content: center;
     box-shadow: 1px 5px 5px #888888;
     cursor: pointer;
     transition: all ease 0.8s;
+    color: aliceblue;
+    padding: 15px 0;
+    font-size: 40px;
+    font-family: 'Gemunu Libre', sans-serif;
+    margin-top: 35px;
 }
 .main-home__button:hover{
     transition: all ease 0.8s;
     background-color: #8F6B36;
 }
-.main-home__button a{
-    color: aliceblue;
-    padding: 10px 0;
-    font-size: 30px;
-    font-family: 'Gemunu Libre', sans-serif;
-}
+
 
 
 /*--------------Estilos Main-Contact-Us-----------------*/
@@ -342,50 +349,72 @@ a:link, a:visited, a:active {
     justify-content: space-between;
     margin: 20px 0;
 }
-.contact-us__iconos img{
-    height: 50px;
+.contact-us__iconos>i{
+    font-size: 50px;
 }
 
 
 
-/*-------------------Estilos Footer------------------*/
+/*-----Estilos Footer-----*/
 .pie-pagina{
     background: linear-gradient(rgb(143, 107, 54, 0.5),rgb(65, 165, 141));
     color: aliceblue;
     font-family: 'Gemunu Libre', sans-serif;
+    margin-top: 60px;
 }
-.pie-pagina .pie-pagina__contenedor{
+.pie-pagina__contenedor{
     height: inherit;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-.pie-pagina__caja-logo-pie{
-  margin-left: 30px;  
+.pie-pagina__contenedor .pie-pagina__caja-logo-pie {
+    font-size: 24px;
+    width: 25%;
+    padding: 25px 0 25px 15px;
 }
 
-.caja-logo-pie__img{
-    height: 100px;
+.pie-pagina__caja-logo-pie .caja-logo-pie__img{
+    height: 120px;
 }
 
-.pie-pagina__enlaces{
+.pie-pagina__contenedor .pie-pagina__enlaces{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    width: 25%;
+    align-items: center;
+    padding: 25px 0;
     
 }
 .pie-pagina__enlaces a{
     color: aliceblue;
-    font-size: 20px;
+    font-size: 24px;
+    padding: 3px 0;
 }
-.pie-pagina__contact-me{
+.pie-pagina__contenedor .pie-pagina__contact-me{
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    flex-wrap: wrap;
+    width: 25%;
+    align-items: end;
+    padding: 25px 15px 25px 0px;
 }
-
 .pie-pagina__contact-me p{
-    font-size: 27px;
+    margin-bottom: 8px;
+    font-size: 28px;
+    width: 60%;
+}
+.pie-pagina__contact-me .pie-pagina__icons{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pie-pagina__icons>i{
+    color: #8F6B36;
+    font-size: 45px;
 }
 
 /*------------------Media-Querys-------------------------------*/

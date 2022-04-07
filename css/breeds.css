@@ -74,8 +74,8 @@ a:link, a:visited, a:active {
     padding-left: 5px;
 }
 
-.apartados__iconos{
-    height: inherit;
+.apartados__iconos>i{
+    color: #8F6B36;
 }
 
 .nav-toggle{
@@ -245,6 +245,10 @@ main .section-previous-views{
     font-family: 'Bitter', serif;
     margin-bottom: 25px;
 }
+.previous-views-title>i{
+    font-size: 30px;
+    color: #8F6B36;
+}
 .section-previous-views .previous-views-container-divs{
     display: flex;
     flex-wrap: wrap;
@@ -253,7 +257,7 @@ main .section-previous-views{
 .previous-views-container-divs .previous-views-container-imgs{
     border: 1px solid;
     border-radius: 10%;
-    width: 23%;
+    width: 21%;
     height: 265px;
     overflow: hidden;
     position: relative;
@@ -267,10 +271,6 @@ main .section-previous-views{
       object-fit: cover;
       object-position: center center;
     }
-}
-.previous-views-container-imgs .img-previous:hover{
-    transition: all ease 0.8s;
-    opacity: 0.3;
 }
 .previous-views-container-imgs .name-dog-previous{
     position: absolute;
@@ -333,12 +333,17 @@ main .section-previous-views{
 .pie-pagina__contact-me p{
     margin-bottom: 8px;
     font-size: 28px;
+    width: 60%;
 }
 .pie-pagina__contact-me .pie-pagina__icons{
-    
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.pie-pagina__contact-me .pie-pagina__icons>img{
-
+.pie-pagina__icons>i{
+    color: #8F6B36;
+    font-size: 45px;
 }
 
 /*--------------------------------------------------------Media Query----------------------------------------------------------*/

@@ -74,8 +74,8 @@ a:link, a:visited, a:active {
     padding-left: 5px;
 }
 
-.apartados__iconos{
-    height: inherit;
+.apartados__iconos>i{
+    color: #8F6B36;
 }
 
 .nav-toggle{
@@ -129,6 +129,7 @@ main .section-uploadImage{
     width: 100%;
     height: 430px;
     margin-bottom: 30px;
+ 
 }
 
 .container-uploadImage .uploadImage{
@@ -141,9 +142,6 @@ main .section-uploadImage{
       object-fit: cover;
       object-position: center center;
     }
-}
-.form-image input{
-    padding: 17px 10px;
 }
 
 .form-upload .form-inputs{
@@ -161,7 +159,7 @@ main .section-uploadImage{
     border: 0;
     border-radius: 10%;
     background-color: #41A58D;
-    padding: 0px 15px;
+    padding: 17px 15px;
     color: aliceblue;
     width: 100%;
 }
@@ -170,16 +168,17 @@ main .section-uploadImage{
 }
 .form-upload .button-uploadImage{
     font-family: 'Gemunu Libre', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     background-color: #41A58D;
     color: aliceblue;
     border: 0;
     border-radius: 10%;
     padding: 14px;
-    margin-top: 20px;
+    margin-top: 40px;
     box-shadow: 1px 5px 5px #888888;
     cursor: pointer;
     width: 100%;
+    height: 74px;
 }
 .form-upload .button-uploadImage:hover{
     background-color: #8F6B36;
@@ -199,7 +198,8 @@ main .section-favorites{
     margin-bottom: 25px;
 }
 .favorite-text>img{
-    height: 35px;
+    font-size: 30px;
+    color: #8F6B36;
 }
 .section-favorites .container-img-favorites{
     display: flex;
@@ -216,11 +216,13 @@ main .section-favorites{
     position: relative;
 }
 
-.favorite-img-div .icono-break-heart{
+.favorite-img-div>i{
     position: absolute;
     top: 4%;
     left: 5%;
-    height: 35px;
+    font-size: 35px;
+    cursor: pointer;
+    color: aliceblue;
 }
 
 .favorite-img-div .favorite-img{
@@ -233,10 +235,7 @@ main .section-favorites{
       object-position: center center;
     }
 }
-.favorite-img-div .favorite-img:hover{
-    transition: all ease 0.8s;
-    opacity: 0.3;
-}
+
 .favorite-img-div .name-dog-favorite{
     position: absolute;
     top: 83%;
@@ -263,7 +262,8 @@ main .section-myUploadImages{
     margin-bottom: 25px;
 }
 .myUploadImages-text>img{
-    height: 30px;
+    font-size: 30px;
+    color: #8F6B36;
 }
 .section-myUploadImages .container-img-myUploadImages{
     display: flex;
@@ -288,10 +288,7 @@ main .section-myUploadImages{
       object-position: center center;
     }
 }
-.myUploadImages-container .myUploadImages-img:hover{
-    transition: all ease 0.8s;
-    opacity: 0.3;
-}
+
 .myUploadImages-container .name-dog-upload{
     position: absolute;
     top: 83%;
@@ -315,6 +312,10 @@ main .section-previous-views{
     font-family: 'Bitter', serif;
     margin-bottom: 25px;
 }
+.previous-views-title>i{
+    font-size: 30px;
+    color: #8F6B36;
+}
 .section-previous-views .previous-views-container-divs{
     display: flex;
     flex-wrap: wrap;
@@ -337,10 +338,6 @@ main .section-previous-views{
       object-fit: cover;
       object-position: center center;
     }
-}
-.previous-views-container-imgs .img-previous:hover{
-    transition: all ease 0.8s;
-    opacity: 0.3;
 }
 .previous-views-container-imgs .name-dog-previous{
     position: absolute;
@@ -403,4 +400,15 @@ main .section-previous-views{
 .pie-pagina__contact-me p{
     margin-bottom: 8px;
     font-size: 28px;
+    width: 60%;
+}
+.pie-pagina__contact-me .pie-pagina__icons{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pie-pagina__icons>i{
+    color: #8F6B36;
+    font-size: 45px;
 }
