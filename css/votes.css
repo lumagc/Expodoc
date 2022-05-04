@@ -482,6 +482,14 @@ main .section-previous-views{
 }
 
 @media only screen and (min-width:703px) and (max-width:1024px){
+    .nav .logo {
+        height: 100px;
+    }
+
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 20px;
+    }
+
     /*Main*/
     main{
         width: 100%;
@@ -505,9 +513,11 @@ main .section-previous-views{
         width: 80%;
         height: 310px;
     }
-    .voting__img .icono-favorite{
-        height: 45px;
+    
+    .voting__img>i {
+        font-size: 50px;
     }
+
     .section-voting .voting__buttons{
         width: 80%;
         margin: 15px auto;
@@ -530,6 +540,11 @@ main .section-previous-views{
     main .section-previous-views{
         padding: 0 80px;
     }
+
+    .previous-views-container-divs .previous-views-container-imgs {
+        width: 45%;
+    }
+
     .section-previous-views .previous-views-title{
         font-size: 35px;
     }
@@ -553,11 +568,47 @@ main .section-previous-views{
     .pie-pagina__contenedor .pie-pagina__enlaces>a{
         font-size: 18px;
     }
-    .pie-pagina__contact-me>span {
-        font-size: 25px;
-    }
+
     .pie-pagina__contact-me picture>img{
         height: 30px;
+    }
+
+    .pie-pagina__contact-me p {
+        font-size: 25px;
+    }
+
+    .pie-pagina__icons>i {
+        font-size: 35px;
+        margin: 0 5px 5px 0;
+    }
+    
+}
+
+@media only screen and (min-width:1025px) and (max-width:1614px){
+    .nav .logo {
+        height: 130px;
+    }
+
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 24px;
+    }
+
+    .voting__img>i {
+        font-size: 60px;
+    }
+    
+    .previous-views-container-imgs:nth-last-child(-n+1){
+        display: none;
+    }
+
+    .previous-views-container-divs .previous-views-container-imgs {
+        width: 30%;
+        height: 260px;
+    }
+
+    .pie-pagina__icons>i {
+        font-size: 42px;
+        margin: 0 18px 5px 0;
     }
 }
 

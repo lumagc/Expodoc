@@ -207,8 +207,7 @@ main .section-breeds{
 .breed-buttons .breed-button__favorite-like-dislike{
     background-color: #41A58D;
     font-family: 'Gemunu Libre', sans-serif;
-    color: aliceblue; 
-    padding: 10px;
+    color: aliceblue;
     border-radius: 15%;
     font-size: 28px;
     text-align: center;
@@ -217,9 +216,10 @@ main .section-breeds{
 .breed-buttons .breed-button__favorite-like-dislike:hover{
     background-color: #8F6B36;
 }
-.breed-button__favorite-like-dislike .icono{
-    margin-right: 8px;
-    height: 30px;
+.breed-button__favorite-like-dislike>i{
+    font-size: 32px;
+    color: #8F6B36;
+    line-height: 85px;
 }
 .breed-button__favorite-like-dislike>span{
     font-size: 28px;
@@ -349,6 +349,10 @@ main .section-previous-views{
 /*--------------------------------------------------------Media Query----------------------------------------------------------*/
 
 @media (max-width: 500px)  {
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 20px;
+    }
+
     main{
         width: 100%;
     }
@@ -413,17 +417,9 @@ main .section-previous-views{
         height: 60px;
     }
 
-    .breed-button__favorite-like-dislike .icono{
-        height: 30px;
-        margin: 0;
-    }
-    @supports(object-fit: cover){
-        .breed-button__favorite-like-dislike .icono{
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
-          padding: 12px;
-        }
+    .breed-button__favorite-like-dislike>i{
+        font-size: 35px;
+        line-height: 60px;
     }
 
     .breed-button__favorite-like-dislike>span{
@@ -480,20 +476,38 @@ main .section-previous-views{
     .pie-pagina__caja-logo-pie>figcaption{
         font-size: 14px;
     }
-    .caja-logo-pie__img{
-        height: 60px;
+
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 80px;
     }
 
     .pie-pagina__contenedor .pie-pagina__enlaces{
         width: 25%;
     }
 
+    .pie-pagina__enlaces a {
+        font-size: 18px;
+    }
+
     .pie-pagina__contenedor .pie-pagina__contact-me{
         width: 25%;
+    }
+
+    .pie-pagina__contact-me p {
+        font-size: 20px;
+    }
+
+    .pie-pagina__icons>i {
+        font-size: 28px;
+        margin-bottom: 5px;
     }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 600px)  {
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 20px;
+    }
+
     main{
         width: 100%;
     }
@@ -557,17 +571,9 @@ main .section-previous-views{
         height: 70px;
     }
 
-    .breed-button__favorite-like-dislike .icono{
-        height: 30px;
-        margin: 0;
-    }
-    @supports(object-fit: cover){
-        .breed-button__favorite-like-dislike .icono{
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
-          padding: 12px;
-        }
+    .breed-button__favorite-like-dislike>i{
+        font-size: 40px;
+        line-height: 70px;
     }
 
     .breed-button__favorite-like-dislike>span{
@@ -625,9 +631,6 @@ main .section-previous-views{
     .pie-pagina__caja-logo-pie>figcaption{
         font-size: 14px;
     }
-    .caja-logo-pie__img{
-        height: 60px;
-    }
 
     .pie-pagina__contenedor .pie-pagina__enlaces{
         width: 25%;
@@ -636,9 +639,30 @@ main .section-previous-views{
     .pie-pagina__contenedor .pie-pagina__contact-me{
         width: 25%;
     }
+
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 80px;
+    }
+
+    .pie-pagina__enlaces a {
+        font-size: 18px;
+    }
+
+    .pie-pagina__contact-me p {
+        font-size: 20px;
+    }
+
+    .pie-pagina__icons>i {
+        font-size: 28px;
+        margin: 0 4px 5px 0;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 750px)  {
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 24px;
+    }
+
     main{
         width: 100%;
     }
@@ -702,17 +726,9 @@ main .section-previous-views{
         height: 70px;
     }
 
-    .breed-button__favorite-like-dislike .icono{
-        height: 30px;
-        margin: 0;
-    }
-    @supports(object-fit: cover){
-        .breed-button__favorite-like-dislike .icono{
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
-          padding: 12px;
-        }
+    .breed-button__favorite-like-dislike>i{
+        font-size: 40px;
+        line-height: 70px;
     }
 
     .breed-button__favorite-like-dislike>span{
@@ -770,23 +786,38 @@ main .section-previous-views{
     .pie-pagina__caja-logo-pie>figcaption{
         font-size: 14px;
     }
-    .caja-logo-pie__img{
-        height: 60px;
-    }
 
     .pie-pagina__contenedor .pie-pagina__enlaces{
         width: 25%;
-    }
-    .pie-pagina__enlaces a{
-
     }
 
     .pie-pagina__contenedor .pie-pagina__contact-me{
         width: 25%;
     }
+
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 80px;
+    }
+
+    .pie-pagina__enlaces a {
+        font-size: 18px;
+    }
+
+    .pie-pagina__contact-me p {
+        font-size: 20px;
+    }
+
+    .pie-pagina__icons>i {
+        font-size: 28px;
+        margin: 0 4px 5px 0;
+    }
 }
 
 @media only screen and (min-width: 751px) and (max-width: 900px)  {
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 24px;
+    }
+
     main{
         width: 100%;
     }
@@ -850,17 +881,8 @@ main .section-previous-views{
         height: 85px;
     }
 
-    .breed-button__favorite-like-dislike .icono{
-        height: 30px;
-        margin: 0;
-    }
-    @supports(object-fit: cover){
-        .breed-button__favorite-like-dislike .icono{
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
-          padding: 12px;
-        }
+    .breed-button__favorite-like-dislike>i{
+        font-size: 45px;
     }
 
     .breed-button__favorite-like-dislike>span{
@@ -918,8 +940,9 @@ main .section-previous-views{
     .pie-pagina__caja-logo-pie>figcaption{
         font-size: 20px;
     }
-    .caja-logo-pie__img{
-        height: 80px;
+
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 94px;
     }
 
     .pie-pagina__contenedor .pie-pagina__enlaces{
@@ -927,7 +950,7 @@ main .section-previous-views{
     }
 
     .pie-pagina__enlaces>a{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .pie-pagina__contenedor .pie-pagina__contact-me{
@@ -940,9 +963,26 @@ main .section-previous-views{
     .pie-pagina__contact-me picture>img{
         height: 42px;
     }
+
+    .pie-pagina__contact-me p {
+        font-size: 24px;
+    }
+
+    .pie-pagina__icons>i {
+        font-size: 35px;
+        margin: 0 6px 5px 0;
+    }
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1310px)  {
+    .nav .logo {
+        height: 132px;
+    }
+
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 22px;
+    }
+
     main{
         width: 85%;
     }
@@ -1006,17 +1046,8 @@ main .section-previous-views{
         height: 85px;
     }
 
-    .breed-button__favorite-like-dislike .icono{
-        height: 30px;
-        margin: 0;
-    }
-    @supports(object-fit: cover){
-        .breed-button__favorite-like-dislike .icono{
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
-          padding: 12px;
-        }
+    .breed-button__favorite-like-dislike>i{
+        font-size: 40px;
     }
 
     .breed-button__favorite-like-dislike>span{
@@ -1072,8 +1103,9 @@ main .section-previous-views{
     .pie-pagina__caja-logo-pie>figcaption{
         font-size: 20px;
     }
-    .caja-logo-pie__img{
-        height: 80px;
+
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 110px;
     }
 
     .pie-pagina__contenedor .pie-pagina__enlaces{
@@ -1081,7 +1113,7 @@ main .section-previous-views{
     }
 
     .pie-pagina__enlaces>a{
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .pie-pagina__contenedor .pie-pagina__contact-me{
@@ -1091,9 +1123,12 @@ main .section-previous-views{
     .pie-pagina__contenedor .pie-pagina__contact-me>span{
         font-size: 26px;
     }
-    .pie-pagina__contact-me picture>img{
-        height: 42px;
+
+    .pie-pagina__icons>i {
+        font-size: 40px;
+        margin: 0 12px 5px 0;
     }
+    
 }
 
 @media only screen and (min-width: 1311px) and (max-width: 1600px)  {
@@ -1160,17 +1195,8 @@ main .section-previous-views{
         height: 85px;
     }
 
-    .breed-button__favorite-like-dislike .icono{
-        height: 30px;
-        margin: 0;
-    }
-    @supports(object-fit: cover){
-        .breed-button__favorite-like-dislike .icono{
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
-          padding: 12px;
-        }
+    .breed-button__favorite-like-dislike>i{
+        font-size: 45px;
     }
 
     .breed-button__favorite-like-dislike>span{
@@ -1226,7 +1252,8 @@ main .section-previous-views{
     .pie-pagina__caja-logo-pie>figcaption{
         font-size: 20px;
     }
-    .caja-logo-pie__img{
+
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
         height: 80px;
     }
 
@@ -1235,7 +1262,7 @@ main .section-previous-views{
     }
 
     .pie-pagina__enlaces>a{
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .pie-pagina__contenedor .pie-pagina__contact-me{
@@ -1245,9 +1272,7 @@ main .section-previous-views{
     .pie-pagina__contenedor .pie-pagina__contact-me>span{
         font-size: 26px;
     }
-    .pie-pagina__contact-me picture>img{
-        height: 42px;
-    }
+    
 }
 
 @media only screen and (min-width: 1601px) and (max-width: 1810px)  {
@@ -1292,7 +1317,7 @@ main .section-previous-views{
         width: 12%;
         height: 17%;
         top: 42%;
-        font-size: 22px;
+        font-size: 40px;
     }
 
     .breed-image-buttons .breed-buttons{
@@ -1314,17 +1339,8 @@ main .section-previous-views{
         height: 85px;
     }
 
-    .breed-button__favorite-like-dislike .icono{
-        height: 30px;
-        margin: 0;
-    }
-    @supports(object-fit: cover){
-        .breed-button__favorite-like-dislike .icono{
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
-          padding: 12px;
-        }
+    .breed-button__favorite-like-dislike>i{
+        font-size: 50px;
     }
 
     .breed-button__favorite-like-dislike>span{
@@ -1389,7 +1405,7 @@ main .section-previous-views{
     }
 
     .pie-pagina__enlaces>a{
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .pie-pagina__contenedor .pie-pagina__contact-me{

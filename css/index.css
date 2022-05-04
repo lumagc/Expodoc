@@ -221,11 +221,20 @@ a:link, a:visited, a:active {
     
 }
 
+@supports(object-fit: cover){
+    .most-liked-div__caja-img, .more-disliked-div__caja-img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+
 .most-liked-div__caja-img>img, .more-disliked-div__caja-img>img{
     width: 100%;
     background-size: cover;
     transition: all ease 0.8s;
 }
+
 .most-liked-div__caja-img>img:hover, .more-disliked-div__caja-img>img:hover{
     opacity: 0.3;
     transition: all ease 0.8s;
@@ -664,8 +673,8 @@ a:link, a:visited, a:active {
     }
 
     .main-home__filters .link-filter {
-        font-size: 24px;
-        margin-right: 35px;
+        font-size: 22px;
+        margin-right: 8px;
     }
 
     .most-liked-title, .more-disliked-title {
@@ -685,6 +694,28 @@ a:link, a:visited, a:active {
     }
     .contact-us__iconos img {
         height: 36px;
+    }
+
+    /*------------Footer-----------*/
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 80px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie {
+        font-size: 18px;
+    }
+
+    .pie-pagina__contact-me .pie-pagina__icons {
+        width: 100%;
+    }
+
+    .pie-pagina__icons>i {
+        font-size: 30px;
+        margin: 0 10px 8px 0;
+    }
+
+    .pie-pagina__contact-me p {
+        width: 100%;
     }
 }
 @media (max-width: 400px){
