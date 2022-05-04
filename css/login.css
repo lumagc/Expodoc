@@ -179,3 +179,112 @@ main .signIn-section{
         font-size: 21px;
     }
 }
+
+@media only screen and (min-width: 657px) and (max-width: 799px)  {
+    main .signIn-title {
+        font-size: 50px;
+    }
+
+    /*------Section sign in------*/
+    .signIn-section .signIn-links-form {
+        width: 100%;
+    }
+
+    .signIn-links-form .text {
+        font-size: 22px;
+    }
+
+    .signIn-links-form .link {
+        font-size: 22px;
+    }
+
+    .signIn-form>label {
+        font-size: 25px;
+    }
+
+    .signIn-form>input {
+        font-size: 19px;
+    }
+
+    .signIn-form>a {
+        font-size: 19px;
+    }
+
+    .signIn-form>button {
+        font-size: 21px;
+    }
+
+    /*------Section logo-info----*/
+
+    .signIn-section .section-logo-info {
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .section-logo-info .logo {
+        width: 120px;
+    }
+
+    .section-logo-info .info {
+        font-size: 21px;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 656px)  {
+    main {
+        width: 100%;
+    }
+
+    main .signIn-title {
+        font-size: 50px;
+        margin: 0 70px 30px 70px;
+    }
+
+    main .signIn-section {
+        margin: 0 70px;
+    }
+
+    /*------Section sign in------*/
+    .signIn-section .signIn-links-form {
+        width: 100%;
+    }
+
+    .signIn-links-form .text {
+        font-size: 22px;
+    }
+
+    .signIn-links-form .link {
+        font-size: 22px;
+    }
+
+    .signIn-form>label {
+        font-size: 25px;
+    }
+
+    .signIn-form>input {
+        font-size: 19px;
+    }
+
+    .signIn-form>a {
+        font-size: 19px;
+    }
+
+    .signIn-form>button {
+        font-size: 21px;
+    }
+
+    /*------Section logo-info----*/
+
+    .signIn-section .section-logo-info {
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .section-logo-info .logo {
+        width: 120px;
+    }
+
+    .section-logo-info .info {
+        font-size: 21px;
+    }
+}

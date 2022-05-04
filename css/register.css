@@ -98,7 +98,7 @@ main .register-section{
     color: #8F6B36;
     font-size: 22px;
     padding-bottom: 5px;
-    width: 90%;
+    width: 100%;
 }
 .register-form .label-checkbox{
     font-size: 18px;
@@ -178,3 +178,131 @@ main .register-section{
     color: red;
 }
 
+@media only screen and (min-width: 820px) and (max-width: 1095px)  {
+    main .register-title {
+        font-size: 50px;
+    }
+    /*--------Register form---------*/
+    .register-links-form .link {
+        font-size: 20px;
+    }
+
+    .register-form>label {
+        font-size: 25px;
+    }
+
+    .form__group>input {
+        font-size: 18px;
+    }
+
+    .register-form>button {
+        font-size: 22px;
+    }
+
+    /*---------Section logo info--------*/
+    .section-logo-info .logo {
+        width: 120px;
+    }
+
+    .section-logo-info .info {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 819px)  {
+    main {
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    main .register-section {
+        width: 100%;
+    }
+    
+    main .register-title {
+        font-size: 50px;
+    }
+    /*--------Register form---------*/
+    .register-section .register-links-form {
+        width: 100%;
+    }
+
+    .register-links-form .link {
+        font-size: 20px;
+    }
+
+    .register-form>label {
+        font-size: 25px;
+    }
+
+    .form__group>input {
+        font-size: 18px;
+    }
+
+    .register-form>button {
+        font-size: 22px;
+    }
+
+    /*---------Section logo info--------*/
+    .register-section .section-logo-info {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .section-logo-info .logo {
+        width: 120px;
+    }
+
+    .section-logo-info .info {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 599px)  {
+    main {
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    main .register-section {
+        width: 100%;
+    }
+    
+    main .register-title {
+        font-size: 50px;
+    }
+    /*--------Register form---------*/
+    .register-section .register-links-form {
+        width: 100%;
+    }
+
+    .register-links-form .link {
+        font-size: 20px;
+    }
+
+    .register-form>label {
+        font-size: 25px;
+    }
+
+    .form__group>input {
+        font-size: 18px;
+    }
+
+    .register-form>button {
+        font-size: 22px;
+    }
+
+    /*---------Section logo info--------*/
+    .register-section .section-logo-info {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .section-logo-info .logo {
+        width: 120px;
+    }
+
+    .section-logo-info .info {
+        font-size: 20px;
+    }
+}
