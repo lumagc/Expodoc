@@ -221,18 +221,17 @@ a:link, a:visited, a:active {
     
 }
 
-@supports(object-fit: cover){
-    .most-liked-div__caja-img, .more-disliked-div__caja-img{
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-    }
-}
-
 .most-liked-div__caja-img>img, .more-disliked-div__caja-img>img{
     width: 100%;
     background-size: cover;
     transition: all ease 0.8s;
+}
+@supports(object-fit: cover){
+    .most-liked-div__caja-img>img, .more-disliked-div__caja-img>img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
 }
 
 .most-liked-div__caja-img>img:hover, .more-disliked-div__caja-img>img:hover{
@@ -678,7 +677,7 @@ a:link, a:visited, a:active {
     }
 
     .most-liked-title, .more-disliked-title {
-        font-size: 43px;
+        font-size: 30px;
     }
 
     .most-liked-div__caja-img:first-child, .more-disliked-div__caja-img:first-child {

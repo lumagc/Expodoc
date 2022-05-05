@@ -1,0 +1,202 @@
+/*Importaciones*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&family=Karla:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Gemunu+Libre:wght@200&family=Karla:wght@300&display=swap');
+/*
+font-family: 'Karla', sans-serif;
+font-family: 'Gemunu Libre', sans-serif;
+font-family: 'Bitter', serif;
+*/
+
+$dog-width: 100px;
+$interval: 200ms;
+$color-gray: #EAEBEC;
+$easing: ease-in-out;
+
+/*-----Estilos para todo el documento-----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+/*-----Estilos Header-----*/
+.header{
+    /*background: linear-gradient(#41A58D,#8F6B36, 5%);*/
+    background: linear-gradient(rgb(65, 165, 141), rgb(143, 107, 54, 0.5));
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+.header .nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav .logo{
+    height: 150px;
+    margin: 10px 0 10px 20px;
+}
+.logo-img{
+    height: inherit;
+}
+
+.nav-menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item{
+    display: block;
+    font-size: 27px;
+    border: 1px solid #888888;
+    box-shadow: 1px 5px 5px #888888;
+    background-color: #41A58D;
+    padding: 15px;
+    text-transform: uppercase;
+    
+}
+.nav-menu .nav-menu-item a, .nav-menu-login .nav-menu-item a{
+    color: aliceblue;
+    display: block;
+}
+
+.nav-menu-login .nav-menu-item{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-menu-login .nav-menu-item>a{
+    display: flex;
+    padding-left: 5px;
+}
+
+.apartados__iconos>i{
+    color: #8F6B36;
+}
+
+.nav-toggle{
+    color:#8F6B36;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 30px;
+    cursor: pointer;
+    display: none;
+}
+.nav-toggle img{
+    height: 50px;
+}
+/*-------------------------------Main Animación-------------------*/
+
+
+/*-----Estilos Footer-----*/
+.pie-pagina{
+    background: linear-gradient(rgb(143, 107, 54, 0.5),rgb(65, 165, 141));
+    color: aliceblue;
+    font-family: 'Gemunu Libre', sans-serif;
+    margin-top: 60px;
+}
+.pie-pagina__contenedor{
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.pie-pagina__contenedor .pie-pagina__caja-logo-pie {
+    font-size: 24px;
+    width: 25%;
+    padding: 25px 0 25px 15px;
+}
+
+.pie-pagina__caja-logo-pie .caja-logo-pie__img{
+    height: 120px;
+}
+
+.pie-pagina__contenedor .pie-pagina__enlaces{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 25%;
+    align-items: center;
+    padding: 25px 0;
+    
+}
+.pie-pagina__enlaces a{
+    color: aliceblue;
+    font-size: 24px;
+    padding: 3px 0;
+}
+.pie-pagina__contenedor .pie-pagina__contact-me{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 25%;
+    align-items: end;
+    padding: 25px 15px 25px 0px;
+}
+.pie-pagina__contact-me p{
+    margin-bottom: 8px;
+    font-size: 28px;
+    width: 60%;
+}
+.pie-pagina__contact-me .pie-pagina__icons{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pie-pagina__icons>i{
+    color: #8F6B36;
+    font-size: 45px;
+}
+
+/* menu hamburguesa*/
+@media (max-width: 860px){
+    
+    .nav .logo{
+        height: 90px;
+    }
+
+    .nav-menu{
+        flex-direction: column;
+        margin-right: 20px;
+        background: rgb(65, 165, 141, 0.5);
+        position: fixed;
+        top: 110px;
+        width: 100%;
+        padding: 20px 0;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    .nav-menu .nav-menu-item {
+        box-shadow: none;
+    }
+    .nav-menu .nav-menu-item:hover {
+        transition: all ease 0.5s;
+        background-color: #8F6B36;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu_visible{
+        left: 0;
+        z-index: 1;
+    }
+    .most-liked-div__caja-img, .more-disliked-div__caja-img {
+        height: 180px;
+    }
+}
