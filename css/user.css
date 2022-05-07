@@ -781,3 +781,124 @@ main .section-previous-views{
         font-size: 22px;
     }
 }
+
+@media (max-width: 499px)  {
+    /*----Header----*/
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 22px;
+    }
+
+    main {
+        width: 65%;
+    }
+    main .uploadImage-text {
+        font-size: 32px;
+    }
+    
+    .form-upload .form-image {
+        width: 100%;
+    }
+
+    .form-image .container-uploadImage {
+        width: 100%;
+        height: 312px;
+        margin: 0 auto;
+    }
+
+    .form-inputs input, .form-image input {
+        margin: 30px 0 0 0;
+        height: 62px;
+    }
+
+    .form-upload .form-inputs {
+        width: 100%;
+    }
+
+    .form-upload .button-uploadImage {
+        font-size: 32px;
+        height: 62px;
+    }
+
+    /*-----Section Favorites-----*/
+
+    .section-favorites .favorite-text {
+        font-size: 28px;
+    }
+
+    .container-img-favorites .favorite-img-div {
+        width: 100%;
+        height: 300px;
+    }
+
+    .favorite-img-div .name-dog-favorite {
+        top: 82%;
+        left: 7%;
+        font-size: 18px;
+    }
+
+    .container-img-favorites .favorite-img-div:nth-last-child(-n+3) {
+        display: none;
+    }
+
+    /*----- Section Upload------*/
+    .section-myUploadImages .myUploadImages-text {
+        font-size: 28px;
+    }
+
+    .container-img-myUploadImages .myUploadImages-container{
+        width: 100%;
+        height: 300px;
+    }
+
+    .container-img-myUploadImages .myUploadImages-container:nth-last-child(-n+3) {
+        display: none;
+    }
+
+    .myUploadImages-container .name-dog-upload {
+        top: 82%;
+        left: 7%;
+        font-size: 18px;
+    }
+
+    /*------ Section Previous views------*/
+    .section-previous-views .previous-views-title {
+        font-size: 28px;
+    }
+
+    .previous-views-container-divs .previous-views-container-imgs{
+        width: 100%;
+        height: 300px;
+    }
+
+    .previous-views-container-divs .previous-views-container-imgs:nth-last-child(-n+3) {
+        display: none;
+    }
+
+    .previous-views-container-imgs .name-dog-previous {
+        top: 82%;
+        left: 7%;
+        font-size: 18px;
+    }
+
+    /*-----Footer----------*/
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 82px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie {
+        font-size: 18px;
+    }
+
+    .pie-pagina__icons>i {
+        margin: 0 4px 8px 0px;
+        font-size: 26px;
+    }
+
+    .pie-pagina__enlaces a {
+        font-size: 17px;
+    }
+
+    .pie-pagina__contact-me p {
+        font-size: 22px;
+    }
+}

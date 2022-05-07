@@ -8,11 +8,6 @@ font-family: 'Gemunu Libre', sans-serif;
 font-family: 'Bitter', serif;
 */
 
-$dog-width: 100px;
-$interval: 200ms;
-$color-gray: #EAEBEC;
-$easing: ease-in-out;
-
 /*-----Estilos para todo el documento-----*/
 *{
     margin: 0;
@@ -98,7 +93,80 @@ a:link, a:visited, a:active {
     height: 50px;
 }
 /*-------------------------------Main Animación-------------------*/
+.container_imgDogs {
+    position: relative;
+    height: 300px;
+    width: 260px;
+    margin: 50px 20px;
+    float: left;
+}
 
+.container_imgDogs>img{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+@supports(object-fit: cover){
+    .container_imgDogs>img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+
+.container_imgDogs p{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.container_imgDogs img.happy:hover{
+    opacity: 0;
+}
+
+.section_animation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.section_animation .text_error{
+    font-size: 180px;
+    text-align: center;
+}
+
+.text_error span:first-child{
+    position: relative;
+    animation-name: four-right;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+
+@keyframes four-right {
+    0%   {color: #8F6B36; right:0px; top:0px;}
+    25%  {color:  #41A58D; right:200px; top:0px;}
+    50%  {color: #8F6B36; right:200px; top:0px;}
+    75%  {color: #41A58D; right:0px; top:0px;}
+    100% {color: #8F6B36; right:0px; top:0px;}
+}
+
+.text_error span:last-child{
+    position: relative;
+    animation-name: efecto;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+
+@keyframes efecto {
+    0%   {color: #8F6B36; left:0px; top:0px;}
+    25%  {color:  #41A58D; left:200px; top:0px;}
+    50%  {color: #8F6B36; left:200px; top:0px;}
+    75%  {color: #41A58D; left:0px; top:0px;}
+    100% {color: #8F6B36; left:0px; top:0px;}
+}
 
 /*-----Estilos Footer-----*/
 .pie-pagina{
@@ -106,6 +174,7 @@ a:link, a:visited, a:active {
     color: aliceblue;
     font-family: 'Gemunu Libre', sans-serif;
     margin-top: 60px;
+    clear: left;
 }
 .pie-pagina__contenedor{
     height: inherit;
@@ -198,5 +267,126 @@ a:link, a:visited, a:active {
     }
     .most-liked-div__caja-img, .more-disliked-div__caja-img {
         height: 180px;
+    }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1254px)  {
+    /*----Header----*/
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 22px;
+    }
+
+    /*-----Footer----------*/
+    .pie-pagina__icons>i {
+        margin: 0 10px 8px 0px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 979px)  {
+    /*----Header----*/
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 22px;
+    }
+
+    /*-----Footer----------*/
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 100px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie {
+        font-size: 22px;
+    }
+
+    .pie-pagina__icons>i {
+        margin: 0 5px 8px 0px;
+        font-size: 40px;
+    }
+
+    .pie-pagina__enlaces a {
+        font-size: 22px;
+    }
+
+    .pie-pagina__contact-me p {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 699px)  {
+    /*----Header----*/
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 22px;
+    }
+
+    /*-------Animation------*/
+    .container_imgDogs {
+        height: 209px;
+        width: 185px;
+    }
+    
+    .section_animation .text_error{
+        font-size: 150px;
+        text-align: center;
+    }
+
+    /*-----Footer----------*/
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 82px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie {
+        font-size: 18px;
+    }
+
+    .pie-pagina__icons>i {
+        margin: 0 4px 8px 0px;
+        font-size: 26px;
+    }
+
+    .pie-pagina__enlaces a {
+        font-size: 17px;
+    }
+
+    .pie-pagina__contact-me p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 499px)  {
+    /*----Header----*/
+    .nav-menu .nav-menu-item, .nav-menu-login .nav-menu-item {
+        font-size: 22px;
+    }
+
+    /*-------Animation------*/
+    .container_imgDogs {
+        height: 209px;
+        width: 185px;
+    }
+    
+    .section_animation .text_error{
+        font-size: 140px;
+        text-align: center;
+    }
+
+    /*-----Footer----------*/
+    .pie-pagina__caja-logo-pie .caja-logo-pie__img {
+        height: 82px;
+    }
+
+    .pie-pagina__contenedor .pie-pagina__caja-logo-pie {
+        font-size: 18px;
+    }
+
+    .pie-pagina__icons>i {
+        margin: 0 4px 8px 0px;
+        font-size: 26px;
+    }
+
+    .pie-pagina__enlaces a {
+        font-size: 17px;
+    }
+
+    .pie-pagina__contact-me p {
+        font-size: 22px;
     }
 }
